@@ -1,0 +1,208 @@
+#include <sstream>
+#include <entities/Actor.h>
+#include "graphics/UserInterface.h"
+#include "graphics/Graphics.h"
+#include "agents/ActorKnowledge.h"
+/** process mouse button pressed events
+*/
+void UserInterface::mouseButtonPressed(Vector4d coordinates, Uint8 button) {
+	coordinates.val[0] = graphics->transformXToWorldCoordinate(coordinates.val[0]);
+	coordinates.val[1] = graphics->transformYToWorldCoordinate(coordinates.val[1]);
+	if (agent != NULL) {
+		agent->mouseButtonPressed(coordinates, button);
+	}
+}
+/** process mouse moves
+*/
+void UserInterface::mouseMoved(int xrel, int yrel, int x, int y) {
+	Vector4d coordinates;
+	coordinates.val[0] = graphics->transformXToWorldCoordinate(x);
+	coordinates.val[1] = graphics->transformYToWorldCoordinate(y);
+	if (agent != NULL) {
+		agent->mouseMoved(coordinates);
+	}
+}
+/** process key released events
+*/
+void UserInterface::keyReleased(SDLKey key) {
+	switch (key) {
+		case SDLK_KP_PLUS :
+			zooming = 0.0;
+			break;
+		case SDLK_KP_MINUS :
+			zooming = 0.0;
+			break;
+		case SDLK_KP8 :
+			movingVertical = 0;
+			break;
+		case SDLK_KP2 :
+			movingVertical = 0;
+			break;
+		case SDLK_KP4 :
+			movingHorizontal = 0;
+			break;
+		case SDLK_KP6 :
+			movingHorizontal = 0;
+			break;
+	}
+}
+/** process key pressed events
+*/
+void UserInterface::keyPressed(SDLKey key) {
+	switch (key) {
+		case SDLK_KP_PLUS :
+			zooming = 0.1;
+			break;
+		case SDLK_KP_MINUS :
+			zooming = -0.1;
+			break;
+		case SDLK_KP8 :
+			movingVertical = -10;
+			break;
+		case SDLK_KP2 :
+			movingVertical = 10;
+			break;
+		case SDLK_KP4 :
+			movingHorizontal = -10;
+			break;
+		case SDLK_KP6 :
+			movingHorizontal = 10;
+			break;
+		case SDLK_KP5 :
+			/*if (agent != NULL) {
+				Vector4d pos = agent->getCurrent()->getPosition();
+				graphics->setOOPoint(pos.val[0], pos.val[1]);
+			}*/
+			break;
+		default :
+			if (agent != NULL) {
+				agent->keyPressed(key);
+			}
+	}
+}
+
+void UserInterface::setOOPoint(double x, double y, double scale){
+	graphics->setOOPoint(x, y, scale);
+}
+
+int UserInterface::getHeight(){
+	return graphics->getHeight();
+}
+
+int UserInterface::getWidth(){
+	return graphics->getWidth();
+}
+
+
+/** draws ui elements on screen surface, and also process long lasting input actions
+for example if something should happen durring all time some key is beeing pressed
+*/
+void UserInterface::update() {	
+	ActorKnowledge * ak = agent->getCurrent();
+
+	if (ak != NULL) {
+		std::string weaponStr;
+		switch (ak->getWeaponType()) {
+			case Enumerations::WeaponType::Chaingun : 
+				weaponStr = "Machinegun";
+				break;
+			case Enumerations::WeaponType::Railgun : 
+				weaponStr = "Railgun";
+				break;
+			case Enumerations::WeaponType::RocketLuncher : 
+				weaponStr = "RocketLuncher";
+				break;
+			case Enumerations::WeaponType::Shotgun : 
+				weaponStr = "Shotgun";
+				break;
+		};
+
+		std::ostringstream ss;
+		ss << "Health: " << ak->getHealth() << "Armour: " << ak->getActor()->getArmour() << " Weapon: " << weaponStr << " Ammo: " << ak->getAmmo(ak->getWeaponType());
+
+		Vector4d white(255,255,255);
+		SDL_Surface * sText = drawtext(ss.str().c_str(), white, blended);
+		SDL_Rect rcDest = {1,0,0,0};
+		SDL_BlitSurface(sText, NULL, graphics->getScreen(), &rcDest);
+		SDL_FreeSurface(sText);
+
+		ss.str("");
+		for (int i = 0; i < Enumerations::WeaponType::WeaponSize; i++) {
+			switch (i) {
+			case Enumerations::WeaponType::Chaingun : 
+				weaponStr = "Machinegun";
+				break;
+			case Enumerations::WeaponType::Railgun : 
+				weaponStr = "Railgun";
+				break;
+			case Enumerations::WeaponType::RocketLuncher : 
+				weaponStr = "RocketLuncher";
+				break;
+			case Enumerations::WeaponType::Shotgun : 
+				weaponStr = "Shotgun";
+				break;
+			};
+			ss << weaponStr << (ak->getActor()->isLoaded(static_cast<Enumerations::WeaponType>(i))?" [:] ":" [ ] ") << ak->getAmmo(static_cast<Enumerations::WeaponType>(i)) << " ";
+		}
+		sText = drawtext(ss.str().c_str(), white, blended);
+		rcDest.y = getHeight() - 12 - 1;
+		SDL_BlitSurface(sText, NULL, graphics->getScreen(), &rcDest);
+		SDL_FreeSurface(sText);
+		ss.str("");
+
+		Vector4d red(255,0,0);
+		Vector4d green(0,255,0);
+		std::vector<ActorInfo> actors = ak->getSeenActors();
+		for (unsigned int i = 0; i < actors.size(); i++) {
+			ActorInfo actr = actors[i];
+			Vector4d color = (ak->getTeam() != actr.getTeam() ? red : green);
+
+			sText = drawtext(actr.getName(), color, blended);
+			rcDest.x = graphics->transformXToViewCoordinate(actr.getPosition().val[0]);
+			rcDest.y = graphics->transformYToViewCoordinate(actr.getPosition().val[1]);
+			SDL_BlitSurface(sText, NULL, graphics->getScreen(), &rcDest);
+			SDL_FreeSurface(sText);
+			ss.str("");
+
+			switch (actr.getWeaponType()) {
+			case Enumerations::WeaponType::Chaingun : 
+				weaponStr = "MG";
+				break;
+			case Enumerations::WeaponType::Railgun : 
+				weaponStr = "RG";
+				break;
+			case Enumerations::WeaponType::RocketLuncher : 
+				weaponStr = "RL";
+				break;
+			case Enumerations::WeaponType::Shotgun : 
+				weaponStr = "SG";
+				break;
+			};
+			ss << "H:" << actr.getHealth() << " A:"<< actr.getArmour() <<" W:" << weaponStr;
+			sText = drawtext(ss.str().c_str(), color, blended);
+			rcDest.x = graphics->transformXToViewCoordinate(actr.getPosition().val[0]);
+			rcDest.y = graphics->transformYToViewCoordinate(actr.getPosition().val[1]) + 12;
+			SDL_BlitSurface(sText, NULL, graphics->getScreen(), &rcDest);
+			SDL_FreeSurface(sText);
+			ss.str("");
+		}
+	}
+
+	graphics->zoom(zooming);
+	graphics->moveVertical(movingVertical);
+	graphics->moveHorizontal(movingHorizontal);
+}
+
+SDL_Surface * UserInterface::drawtext(const char * text, Vector4d color, textquality quality)
+{
+	SDL_Color tmpfontcolor = {color.val[0],color.val[1],color.val[2],128};
+//  SDL_Color tmpfontcolor = {255,255,255,128};
+  SDL_Color tmpfontbgcolor = {0, 0, 0, 128};
+  SDL_Surface *resulting_text;
+ 
+  if (quality == solid) resulting_text = TTF_RenderText_Solid(defaultFont, text, tmpfontcolor);
+  else if (quality == shaded) resulting_text = TTF_RenderText_Shaded(defaultFont, text, tmpfontcolor, tmpfontbgcolor);
+  else if (quality == blended) resulting_text = TTF_RenderText_Blended(defaultFont, text, tmpfontcolor);
+ 
+  return resulting_text;
+}

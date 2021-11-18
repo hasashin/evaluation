@@ -1,0 +1,80 @@
+man.staff.melee.e "images\staffstan bitmaps\attack e00" bmp 13 T 106 76 48
+man.staff.melee.n "images\staffstan bitmaps\attack n00" bmp 13 T 106 76 48
+man.staff.melee.ne "images\staffstan bitmaps\attack ne00" bmp 13 T 106 76 48
+man.staff.melee.nw "images\staffstan bitmaps\attack nw00" bmp 13 T 106 76 48
+man.staff.melee.s "images\staffstan bitmaps\attack s00" bmp 13 T 106 76 48
+man.staff.melee.se "images\staffstan bitmaps\attack se00" bmp 13 T 106 76 48
+man.staff.melee.sw "images\staffstan bitmaps\attack sw00" bmp 13 T 106 76 48
+man.staff.melee.w "images\staffstan bitmaps\attack w00" bmp 13 T 106 76 48
+man.staff.dying.e "images\staffstan bitmaps\staffstan kippt um e000" bmp 9 T 106 76 48
+man.staff.dying.n "images\staffstan bitmaps\staffstan kippt um n000" bmp 9 T 106 76 48
+man.staff.dying.ne "images\staffstan bitmaps\staffstan kippt um ne000" bmp 9 T 106 76 48
+man.staff.dying.nw "images\staffstan bitmaps\staffstan kippt um nw000" bmp 9 T 106 76 48
+man.staff.dying.s "images\staffstan bitmaps\staffstan kippt um s000" bmp 9 T 106 76 48
+man.staff.dying.se "images\staffstan bitmaps\staffstan kippt um se000" bmp 9 T 106 76 48
+man.staff.dying.sw "images\staffstan bitmaps\staffstan kippt um sw000" bmp 9 T 106 76 48
+man.staff.dying.w "images\staffstan bitmaps\staffstan kippt um w000" bmp 9 T 106 76 48
+man.staff.walking.e "images\staffstan bitmaps\staffstan lauft e000" bmp 9 T 106 76 48
+man.staff.walking.n "images\staffstan bitmaps\staffstan lauft n000" bmp 9 T 106 76 48
+man.staff.walking.ne "images\staffstan bitmaps\staffstan lauft ne000" bmp 9 T 106 76 48
+man.staff.walking.nw "images\staffstan bitmaps\staffstan lauft nw000" bmp 9 T 106 76 48
+man.staff.walking.s "images\staffstan bitmaps\staffstan lauft s000" bmp 9 T 106 76 48
+man.staff.walking.se "images\staffstan bitmaps\staffstan lauft se000" bmp 9 T 106 76 48
+man.staff.walking.sw "images\staffstan bitmaps\staffstan lauft sw000" bmp 9 T 106 76 48
+man.staff.walking.w "images\staffstan bitmaps\staffstan lauft w000" bmp 9 T 106 76 48
+man.staff.shooting.e "images\staffstan bitmaps\ashooting e000" bmp 6 T 106 76 48
+man.staff.shooting.n "images\staffstan bitmaps\ashooting n000" bmp 6 T 106 76 48
+man.staff.shooting.ne "images\staffstan bitmaps\ashooting ne000" bmp 6 T 106 76 48
+man.staff.shooting.nw "images\staffstan bitmaps\ashooting nw000" bmp 6 T 106 76 48
+man.staff.shooting.s "images\staffstan bitmaps\ashooting s000" bmp 6 T 106 76 48
+man.staff.shooting.se "images\staffstan bitmaps\ashooting se000" bmp 6 T 106 76 48
+man.staff.shooting.sw "images\staffstan bitmaps\ashooting sw000" bmp 6 T 106 76 48
+man.staff.shooting.w "images\staffstan bitmaps\ashooting w000" bmp 6 T 106 76 48
+man.staff.aiming.e "images\staffstan bitmaps\aiming e000" bmp 5 T 106 76 48
+man.staff.aiming.n "images\staffstan bitmaps\aiming n000" bmp 5 T 106 76 48
+man.staff.aiming.ne "images\staffstan bitmaps\aiming ne000" bmp 5 T 106 76 48
+man.staff.aiming.nw "images\staffstan bitmaps\aiming nw000" bmp 5 T 106 76 48
+man.staff.aiming.s "images\staffstan bitmaps\aiming s000" bmp 5 T 106 76 48
+man.staff.aiming.se "images\staffstan bitmaps\aiming se000" bmp 5 T 106 76 48
+man.staff.aiming.sw "images\staffstan bitmaps\aiming sw000" bmp 5 T 106 76 48
+man.staff.aiming.w "images\staffstan bitmaps\aiming w000" bmp 5 T 106 76 48
+man.staff.running.e "images\staffstan bitmaps\staffstan rennt e000" bmp 9 T 106 76 48
+man.staff.running.n "images\staffstan bitmaps\staffstan rennt n000" bmp 9 T 106 76 48
+man.staff.running.ne "images\staffstan bitmaps\staffstan rennt ne000" bmp 9 T 106 76 48
+man.staff.running.nw "images\staffstan bitmaps\staffstan rennt nw000" bmp 9 T 106 76 48
+man.staff.running.s "images\staffstan bitmaps\staffstan rennt s000" bmp 9 T 106 76 48
+man.staff.running.se "images\staffstan bitmaps\staffstan rennt se000" bmp 9 T 106 76 48
+man.staff.running.sw "images\staffstan bitmaps\staffstan rennt sw000" bmp 9 T 106 76 48
+man.staff.running.w "images\staffstan bitmaps\staffstan rennt w000" bmp 9 T 106 76 48
+man.staff.throwing.e "images\staffstan bitmaps\staffstan spricht e000" bmp 7 T 106 76 48
+man.staff.throwing.n "images\staffstan bitmaps\staffstan spricht n000" bmp 7 T 106 76 48
+man.staff.throwing.ne "images\staffstan bitmaps\staffstan spricht ne000" bmp 7 T 106 76 48
+man.staff.throwing.nw "images\staffstan bitmaps\staffstan spricht nw000" bmp 7 T 106 76 48
+man.staff.throwing.s "images\staffstan bitmaps\staffstan spricht s000" bmp 7 T 106 76 48
+man.staff.throwing.se "images\staffstan bitmaps\staffstan spricht se000" bmp 7 T 106 76 48
+man.staff.throwing.sw "images\staffstan bitmaps\staffstan spricht sw000" bmp 7 T 106 76 48
+man.staff.throwing.w "images\staffstan bitmaps\staffstan spricht w000" bmp 7 T 106 76 48
+man.staff.stopped.e "images\staffstan bitmaps\staffstan steht0006" bmp -1 T 106 76 48
+man.staff.stopped.n "images\staffstan bitmaps\staffstan steht0004" bmp -1 T 106 76 48
+man.staff.stopped.ne "images\staffstan bitmaps\staffstan steht0005" bmp -1 T 106 76 48
+man.staff.stopped.nw "images\staffstan bitmaps\staffstan steht0003" bmp -1 T 106 76 48
+man.staff.stopped.s "images\staffstan bitmaps\staffstan steht0000" bmp -1 T 106 76 48
+man.staff.stopped.se "images\staffstan bitmaps\staffstan steht0007" bmp -1 T 106 76 48
+man.staff.stopped.sw "images\staffstan bitmaps\staffstan steht0001" bmp -1 T 106 76 48
+man.staff.stopped.w "images\staffstan bitmaps\staffstan steht0002" bmp -1 T 106 76 48
+man.staff.been.hit.e "images\staffstan bitmaps\staffstan treffer e000" bmp 7 T 106 76 48
+man.staff.been.hit.n "images\staffstan bitmaps\staffstan treffer n000" bmp 7 T 106 76 48
+man.staff.been.hit.ne "images\staffstan bitmaps\staffstan treffer ne000" bmp 7 T 106 76 48
+man.staff.been.hit.nw "images\staffstan bitmaps\staffstan treffer nw000" bmp 7 T 106 76 48
+man.staff.been.hit.s "images\staffstan bitmaps\staffstan treffer s000" bmp 7 T 106 76 48
+man.staff.been.hit.se "images\staffstan bitmaps\staffstan treffer se000" bmp 7 T 106 76 48
+man.staff.been.hit.sw "images\staffstan bitmaps\staffstan treffer sw000" bmp 7 T 106 76 48
+man.staff.been.hit.w "images\staffstan bitmaps\staffstan treffer w000" bmp 7 T 106 76 48
+man.staff.reload.e "images\staffstan bitmaps\stan strickt e000" bmp 7 T 106 76 48
+man.staff.reload.n "images\staffstan bitmaps\stan strickt n000" bmp 7 T 106 76 48
+man.staff.reload.ne "images\staffstan bitmaps\stan strickt ne000" bmp 7 T 106 76 48
+man.staff.reload.nw "images\staffstan bitmaps\stan strickt nw000" bmp 7 T 106 76 48
+man.staff.reload.s "images\staffstan bitmaps\stan strickt s000" bmp 7 T 106 76 48
+man.staff.reload.se "images\staffstan bitmaps\stan strickt se000" bmp 7 T 106 76 48
+man.staff.reload.sw "images\staffstan bitmaps\stan strickt sw000" bmp 7 T 106 76 48
+man.staff.reload.w "images\staffstan bitmaps\stan strickt w000" bmp 7 T 106 76 48

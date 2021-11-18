@@ -1,0 +1,70 @@
+8
+
+dir
+65
+http://svn2.assembla.com/svn/evaLUAtion-lynx/evaLUAtion/images
+http://svn2.assembla.com/svn/evaLUAtion-lynx
+
+
+
+2009-01-16T17:52:52.461943Z
+46
+piotr.sienkowski@gmail.com
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+8f7cbc4e-d821-48fb-b665-6de9fca9247a
+
+other.txt
+file
+
+
+
+
+2009-01-16T18:00:43.687369Z
+d388571db0ad187d678b8196ab294b7f
+2008-10-15T11:51:35.820946Z
+36
+piotr.sienkowski@gmail.com
+
+staff.txt
+file
+
+
+
+
+2009-01-16T18:00:43.714711Z
+14ca98b622dd0b118743374fd57be751
+2008-05-20T12:41:25.923070Z
+22
+piotr.sienkowski@gmail.com
+
+bowskel bitmaps
+dir
+
+staffstan bitmaps
+dir
+
+skel.txt
+file
+
+
+
+
+2009-01-16T18:00:43.740100Z
+82213973f377591d12267ad4000bed32
+2008-05-11T14:50:16.896697Z
+21
+piotr.sienkowski@gmail.com
+

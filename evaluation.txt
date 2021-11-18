@@ -1,0 +1,266 @@
+u¿ywane biblioteki:
+boost_1_35_0
+SDL-1.2.13
+SDL_image-1.2.6
+SDL_gfx-2.0.16
+SDL_ttf-2.0.9
+ffll_2.2.1
+lua5_1_3
+luabind - bierz¹ca wersja z svn (preferowane)
+lub 
+luabind 0.7 
+	+ patch 
+http://sourceforge.net/tracker/index.php?func=detail&aid=1491056&group_id=77060&atid=549060
+	+ zmiana w LuaAgent.cpp
+	z
+		#include <lua.hpp>
+	na
+		extern "C" {
+			
+#include "lua.h"
+
+			#include "lualib.h"
+			
+#include "lauxlib.h"
+
+		}
+
+---------------------------Labind fix for vs2008----------------------------------------
+It seems that it is an error specific to VC 2008 and that it has to do with abstract classes. 
+
+Basically a solution is to edit this line: (class_cache.hpp ln 78 in my copy) 
+
+Code: Select all
+class_rep* get_class_rep(lua_State* L, void(*)(T) = 0)
+
+
+to 
+Code: Select all
+class_rep* get_class_rep(lua_State* L, void(*)(T*) = 0)
+
+----------------------------------------------------------------------------------------
+evaluation.cfg - plik konfiguracyjny postaci linii nazwaKategorii.nazwa=wartosc
+
+Configuration file and command line options
+    ("height,h", value<int>()->default_value(600), "window height")
+    ("width,w", value<int>()->default_value(800), "window width")
+	("map.actors.file", value<std::string>()->default_value("actors.eaf"), "file with actors definition")
+	("map.filename", value<std::string>()->default_value("random"), "map to use")
+	("respawns", "do agents respawn, if line is missing they dont respawn")
+
+Configuration file options
+	("actor.speed", value<double>()->default_value(10.0))
+	("actor.maxHealth", value<int>()->default_value(100))
+	("actor.maxArmour", value<int>()->default_value(100))
+	("weapon.chaingun.ammo", value<int>()->default_value(50))
+	("weapon.railgun.ammo", value<int>()->default_value(3))
+	("weapon.rocket.ammo", value<int>()->default_value(5))
+	("weapon.shotgun.ammo", value<int>()->default_value(4))
+
+Command line options
+	("config-file", value<std::string>()->default_value("evaLUAtion.cfg"), "configuration file")
+----------------------------------------------------------------------------------------
+*.emf - mapy
+*.eaf - ustawienia aktorów
+linie o postaci
+UnikatowaNazwaAktora agentKontroluj¹cy(ms|fz|sc:nazwaPliku) numerTeamu po³o¿enieStartowe(x i y) "skórka"dlaAktora
+
+Mouse Agent
+prawy - chodzenie
+lewy - strza³
+numeryczne strza³ki - przeuwanie widoku
+numeryczny +/- - powiekrzenie pomiejszenie widoku
+1-4 - zmiana broni
+
+Fuzzy Agent
+*.fcl
+
+Lua Agent
+interfejs Lua dla agentów:
+skrypt powinien implementowaæ funkcjê o postaci
+
+function [nazwaSkryptu]whatTo(agent, actorKnowledge, gametime)
+	//your code goes here - wywolywane w kazdym kroku
+end
+
+oraz
+
+function [nazwaSkryptu]onStart(agent, actorKnowledge, gametime)
+	//your code goes here - wywolywane po spawnie actora
+end
+
+udostêpnione Lua objekty i metody C++:
+
+LuaAgent 
+//pierwszy argument (agent) funkcji whatTo jest tego typu
+//na rzecz tego oobiektu wywo³uje siê funkcjê która ustawia nastêpn¹ akcjê dla ludzika
+//jeœli postaæ ma kontynuowaæ akcjê któr¹ wykonywa³a nale¿y wywo³aæ continueAction
+//obowi¹zuj¹ca jest ostatnio ustawiona akcja
+
+class LuaAgent
+{
+public:
+	double randomDouble();
+	void selectWeapon(Enumerations::WeaponType weapon);
+	void moveDirection(Vector4d direction);
+	void moveTo(Vector4d target);
+	void reload();
+	void rotate(Vector4d direction);
+/*do usuniecia*/	void shootAt(ActorInfo enemy);
+	void shootAtPoint(Vector4d vect);
+	void wait();
+	void continueAction();
+};
+
+ActorKnowledge 
+//drugi argument (actorKnowledge) funkcji whatTo jest tego typu
+//reprezentuje wiedzê któr¹ posiada sterowany przez skrypt ludzik o sobie i otoczeniu
+
+class ActorKnowledge
+{
+public:
+	ActorKnowledge(Actor * actor);
+	void updateSpotting();
+	int getAmmo(Enumerations::WeaponType type);
+	Vector4d getPosition();
+	Vector4d getDirection();
+	Navigation * getNavigation();
+	unsigned short getTeam();
+	int getHealth();
+	Enumerations::WeaponType getWeaponType();
+	int getArmour();
+	bool isMoving();
+	bool isLoaded(Enumerations::WeaponType type);
+	Vector4d getLongDestination();
+	Vector4d getShortDestination();
+	const char* getName();
+
+	ActorInfo getSelf();
+	std::vector<ActorInfo> getSeenFriends();
+	std::vector<ActorInfo> getSeenFoes();
+	std::vector<ActorInfo> getSeenActors();
+
+	int getEstimatedTimeToReach(Vector4d self, Vector4d target);
+	Actor * getActor() {
+		return actor;
+	}
+private:
+	std::set<ActorInfo> seenActors;
+	std::set<ObjectInfo*> seenObjects;
+	Actor * actor;
+};
+
+ActorInfo
+//reprezentuje informacje dostêpne o sobie, wrogach, sojusznikach
+
+class ActorInfo
+{
+public:
+	ActorInfo() {}
+	Vector4d getPosition();
+	Vector4d getDirection();
+	void setPosition(Vector4d position);
+	void setDirection(Vector4d direction);
+	Enumerations::ActionType getActionType();
+	void setActionType(Enumerations::ActionType type);
+	unsigned short getTeam();
+	void setTeam(unsigned short team);
+	int getHealth();
+	void setHealth(int health);
+	int getArmour();
+	void setArmour(int armour);
+	const char* getName();
+	Enumerations::WeaponType getWeaponType();
+	void setWeaponType(Enumerations::WeaponType type);
+};
+
+Vector4d
+//wektor 4 double
+
+struct Vector4d {
+private:
+	double val[4];
+public:
+	Vector4d (double, double, double, double);
+	double value(int i) {
+		return val[i];
+	}
+	double dot(Vector4d & b); //liczy dot produkt wektrorów znolmalizowanych !!!
+	double length();
+	double lengthSquared();
+	Vector4d operator-(const Vector4d &q);
+	Vector4d operator+(const Vector4d &q);
+	Vector4d operator*(const double &q);
+	Vector4d operator/(const double &q);
+	Vector4d normal();
+	Vector4d normalize();
+};
+
+Enumerations
+//klasa przechowuje tylko definicje u¿ywanych enumów
+
+class Enumerations {
+public:
+	enum ActionType {
+		Moving,
+		Shooting,
+		ChangingWeapon,
+		Dying,
+		Reloading,
+		Waiting
+	};
+	enum WeaponType {
+		Chaingun,
+		Railgun,
+		RocketLuncher,
+		Shotgun,
+		WeaponSize
+	};
+};
+
+Navigation
+//klasa wspomagaj¹ca nawigacje agentów
+
+class Navigation {
+public:
+	/**checks if ray colides any solid thing on the way
+	*/
+	bool anyRayCrateColision(Vector4d displacementVector, Vector4d positionVector);
+	Vector4d getNodePosition(int index);
+	/**finds shortest way between two points
+	*/
+	std::vector<int> searchWay(Vector4d from, Vector4d to);
+	int getNumberOfTriggers();
+	Trigger * getTrigger(int index);
+	int getNumberOfSpawnPoints();
+	Vector4d getSpawnPoint(int index);
+}
+
+Trigger
+//triggery to health packi, armour packi, weapon packi
+
+class Trigger : public Entity
+{
+public:
+	enum TriggerType {
+		Weapon,
+		Armour,
+		Health
+	};
+	TriggerType getType();
+	bool isActive();
+	Vector4d getPosition();
+	double getBoundingRadius();
+}
+
+std::vector<ActorInfo> a w³aœciwie vectorOfActorInfo
+//wektor ActorInfo jedyne metody które mo¿na na nim wykonaæ
+
+	int size();
+	ActorInfo at(int pos);
+
+std::vector<int> a w³aœciwie vectorOfInt
+//wektor int jedyne metody które mo¿na na nim wykonaæ
+
+	int size();
+	int at(int pos);

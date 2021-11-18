@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/evaLUAtion-lynx/!svn/ver/64/evaLUAtion/fis
+END
+chaingun.fcl
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/evaLUAtion-lynx/!svn/ver/64/evaLUAtion/fis/chaingun.fcl
+END
+enemy.fcl
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/evaLUAtion-lynx/!svn/ver/64/evaLUAtion/fis/enemy.fcl
+END
+lookForHealth.fcl
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/evaLUAtion-lynx/!svn/ver/64/evaLUAtion/fis/lookForHealth.fcl
+END
+railgun.fcl
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/evaLUAtion-lynx/!svn/ver/64/evaLUAtion/fis/railgun.fcl
+END
+defend.fcl
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/evaLUAtion-lynx/!svn/ver/64/evaLUAtion/fis/defend.fcl
+END
+lookForAmmo.fcl
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/evaLUAtion-lynx/!svn/ver/64/evaLUAtion/fis/lookForAmmo.fcl
+END
+attack.fcl
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/evaLUAtion-lynx/!svn/ver/64/evaLUAtion/fis/attack.fcl
+END
+rocket.fcl
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/evaLUAtion-lynx/!svn/ver/64/evaLUAtion/fis/rocket.fcl
+END
+shotgun.fcl
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/evaLUAtion-lynx/!svn/ver/64/evaLUAtion/fis/shotgun.fcl
+END
+ammo.fcl
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/evaLUAtion-lynx/!svn/ver/64/evaLUAtion/fis/ammo.fcl
+END

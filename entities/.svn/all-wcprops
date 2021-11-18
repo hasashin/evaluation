@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/evaLUAtion-lynx/!svn/ver/81/evaLUAtion/entities
+END
+Entity.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/evaLUAtion-lynx/!svn/ver/81/evaLUAtion/entities/Entity.h
+END
+CustomShell.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/evaLUAtion-lynx/!svn/ver/77/evaLUAtion/entities/CustomShell.cpp
+END
+BoundingBox.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/evaLUAtion-lynx/!svn/ver/80/evaLUAtion/entities/BoundingBox.h
+END
+Wall.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/evaLUAtion-lynx/!svn/ver/80/evaLUAtion/entities/Wall.h
+END
+CustomShell.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/evaLUAtion-lynx/!svn/ver/80/evaLUAtion/entities/CustomShell.h
+END
+Actor.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/evaLUAtion-lynx/!svn/ver/80/evaLUAtion/entities/Actor.cpp
+END
+Trigger.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/evaLUAtion-lynx/!svn/ver/80/evaLUAtion/entities/Trigger.h
+END
+ArmourPack.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/evaLUAtion-lynx/!svn/ver/80/evaLUAtion/entities/ArmourPack.h
+END
+HealthPack.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/evaLUAtion-lynx/!svn/ver/80/evaLUAtion/entities/HealthPack.h
+END
+Entity.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/evaLUAtion-lynx/!svn/ver/72/evaLUAtion/entities/Entity.cpp
+END
+Actor.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/evaLUAtion-lynx/!svn/ver/80/evaLUAtion/entities/Actor.h
+END
+WeaponPack.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/evaLUAtion-lynx/!svn/ver/80/evaLUAtion/entities/WeaponPack.h
+END

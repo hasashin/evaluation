@@ -1,0 +1,80 @@
+skeleton.bow.been.hit.e "images\bowskel bitmaps\been hit e000" bmp 7 T 106 76 48
+skeleton.bow.been.hit.n "images\bowskel bitmaps\been hit n000" bmp 7 T 106 76 48
+skeleton.bow.been.hit.ne "images\bowskel bitmaps\been hit ne000" bmp 7 T 106 76 48
+skeleton.bow.been.hit.nw "images\bowskel bitmaps\been hit nw000" bmp 7 T 106 76 48
+skeleton.bow.been.hit.s "images\bowskel bitmaps\been hit s000" bmp 7 T 106 76 48
+skeleton.bow.been.hit.se "images\bowskel bitmaps\been hit se000" bmp 7 T 106 76 48
+skeleton.bow.been.hit.sw "images\bowskel bitmaps\been hit sw000" bmp 7 T 106 76 48
+skeleton.bow.been.hit.w "images\bowskel bitmaps\been hit w000" bmp 7 T 106 76 48
+skeleton.bow.dying.e "images\bowskel bitmaps\disintegrate e000" bmp 9 T 106 76 48
+skeleton.bow.dying.n "images\bowskel bitmaps\disintegrate n000" bmp 9 T 106 76 48
+skeleton.bow.dying.ne "images\bowskel bitmaps\disintegrate ne000" bmp 9 T 106 76 48
+skeleton.bow.dying.nw "images\bowskel bitmaps\disintegrate nw000" bmp 9 T 106 76 48
+skeleton.bow.dying.s "images\bowskel bitmaps\disintegrate s000" bmp 9 T 106 76 48
+skeleton.bow.dying.se "images\bowskel bitmaps\disintegrate se000" bmp 9 T 106 76 48
+skeleton.bow.dying.sw "images\bowskel bitmaps\disintegrate sw000" bmp 9 T 106 76 48
+skeleton.bow.dying.w "images\bowskel bitmaps\disintegrate w000" bmp 9 T 106 76 48
+skeleton.bow.melee.e "images\bowskel bitmaps\kicking e000" bmp 9 T 106 76 48
+skeleton.bow.melee.n "images\bowskel bitmaps\kicking n000" bmp 9 T 106 76 48
+skeleton.bow.melee.ne "images\bowskel bitmaps\kicking ne000" bmp 9 T 106 76 48
+skeleton.bow.melee.nw "images\bowskel bitmaps\kicking nw000" bmp 9 T 106 76 48
+skeleton.bow.melee.s "images\bowskel bitmaps\kicking s000" bmp 9 T 106 76 48
+skeleton.bow.melee.se "images\bowskel bitmaps\kicking se000" bmp 9 T 106 76 48
+skeleton.bow.melee.sw "images\bowskel bitmaps\kicking sw000" bmp 9 T 106 76 48
+skeleton.bow.melee.w "images\bowskel bitmaps\kicking w000" bmp 9 T 106 76 48
+skeleton.bow.reload.e "images\bowskel bitmaps\paused e000" bmp 9 T 106 76 48
+skeleton.bow.reload.n "images\bowskel bitmaps\paused n000" bmp 9 T 106 76 48
+skeleton.bow.reload.ne "images\bowskel bitmaps\paused ne000" bmp 9 T 106 76 48
+skeleton.bow.reload.nw "images\bowskel bitmaps\paused nw000" bmp 9 T 106 76 48
+skeleton.bow.reload.s "images\bowskel bitmaps\paused s000" bmp 9 T 106 76 48
+skeleton.bow.reload.se "images\bowskel bitmaps\paused se000" bmp 9 T 106 76 48
+skeleton.bow.reload.sw "images\bowskel bitmaps\paused sw000" bmp 9 T 106 76 48
+skeleton.bow.reload.w "images\bowskel bitmaps\paused w000" bmp 9 T 106 76 48
+skeleton.bow.running.e "images\bowskel bitmaps\running e000" bmp 8 T 106 76 48
+skeleton.bow.running.n "images\bowskel bitmaps\running n000" bmp 8 T 106 76 48
+skeleton.bow.running.ne "images\bowskel bitmaps\running ne000" bmp 8 T 106 76 48
+skeleton.bow.running.nw "images\bowskel bitmaps\running nw000" bmp 8 T 106 76 48
+skeleton.bow.running.s "images\bowskel bitmaps\running s000" bmp 8 T 106 76 48
+skeleton.bow.running.se "images\bowskel bitmaps\running se000" bmp 8 T 106 76 48
+skeleton.bow.running.sw "images\bowskel bitmaps\running sw000" bmp 8 T 106 76 48
+skeleton.bow.running.w "images\bowskel bitmaps\running w000" bmp 8 T 106 76 48
+skeleton.bow.aiming.e "images\bowskel bitmaps\aiming e000" bmp 7 T 106 76 48
+skeleton.bow.aiming.n "images\bowskel bitmaps\aiming n000" bmp 7 T 106 76 48
+skeleton.bow.aiming.ne "images\bowskel bitmaps\aiming ne000" bmp 7 T 106 76 48
+skeleton.bow.aiming.nw "images\bowskel bitmaps\aiming nw000" bmp 7 T 106 76 48
+skeleton.bow.aiming.s "images\bowskel bitmaps\aiming s000" bmp 7 T 106 76 48
+skeleton.bow.aiming.se "images\bowskel bitmaps\aiming se000" bmp 7 T 106 76 48
+skeleton.bow.aiming.sw "images\bowskel bitmaps\aiming sw000" bmp 7 T 106 76 48
+skeleton.bow.aiming.w "images\bowskel bitmaps\aiming w000" bmp 7 T 106 76 48
+skeleton.bow.shooting.e "images\bowskel bitmaps\ashooting e000" bmp 6 T 106 76 48
+skeleton.bow.shooting.n "images\bowskel bitmaps\ashooting n000" bmp 6 T 106 76 48
+skeleton.bow.shooting.ne "images\bowskel bitmaps\ashooting ne000" bmp 6 T 106 76 48
+skeleton.bow.shooting.nw "images\bowskel bitmaps\ashooting nw000" bmp 6 T 106 76 48
+skeleton.bow.shooting.s "images\bowskel bitmaps\ashooting s000" bmp 6 T 106 76 48
+skeleton.bow.shooting.se "images\bowskel bitmaps\ashooting se000" bmp 6 T 106 76 48
+skeleton.bow.shooting.sw "images\bowskel bitmaps\ashooting sw000" bmp 6 T 106 76 48
+skeleton.bow.shooting.w "images\bowskel bitmaps\ashooting w000" bmp 6 T 106 76 48
+skeleton.bow.stopped.e "images\bowskel bitmaps\stopped0006" bmp -1 T 106 76 48
+skeleton.bow.stopped.n "images\bowskel bitmaps\stopped0004" bmp -1 T 106 76 48
+skeleton.bow.stopped.ne "images\bowskel bitmaps\stopped0005" bmp -1 T 106 76 48
+skeleton.bow.stopped.nw "images\bowskel bitmaps\stopped0003" bmp -1 T 106 76 48
+skeleton.bow.stopped.s "images\bowskel bitmaps\stopped0000" bmp -1 T 106 76 48
+skeleton.bow.stopped.se "images\bowskel bitmaps\stopped0007" bmp -1 T 106 76 48
+skeleton.bow.stopped.sw "images\bowskel bitmaps\stopped0001" bmp -1 T 106 76 48
+skeleton.bow.stopped.w "images\bowskel bitmaps\stopped0002" bmp -1 T 106 76 48
+skeleton.bow.throwing.e "images\bowskel bitmaps\talking e000" bmp 9 T 106 76 48
+skeleton.bow.throwing.n "images\bowskel bitmaps\talking n000" bmp 9 T 106 76 48
+skeleton.bow.throwing.ne "images\bowskel bitmaps\talking ne000" bmp 9 T 106 76 48
+skeleton.bow.throwing.nw "images\bowskel bitmaps\talking nw000" bmp 9 T 106 76 48
+skeleton.bow.throwing.s "images\bowskel bitmaps\talking s000" bmp 9 T 106 76 48
+skeleton.bow.throwing.se "images\bowskel bitmaps\talking se000" bmp 9 T 106 76 48
+skeleton.bow.throwing.sw "images\bowskel bitmaps\talking sw000" bmp 9 T 106 76 48
+skeleton.bow.throwing.w "images\bowskel bitmaps\talking w000" bmp 9 T 106 76 48
+skeleton.bow.walking.e "images\bowskel bitmaps\walking e000" bmp 8 T 106 76 48
+skeleton.bow.walking.n "images\bowskel bitmaps\walking n000" bmp 8 T 106 76 48
+skeleton.bow.walking.ne "images\bowskel bitmaps\walking ne000" bmp 8 T 106 76 48
+skeleton.bow.walking.nw "images\bowskel bitmaps\walking nw000" bmp 8 T 106 76 48
+skeleton.bow.walking.s "images\bowskel bitmaps\walking s000" bmp 8 T 106 76 48
+skeleton.bow.walking.se "images\bowskel bitmaps\walking se000" bmp 8 T 106 76 48
+skeleton.bow.walking.sw "images\bowskel bitmaps\walking sw000" bmp 8 T 106 76 48
+skeleton.bow.walking.w "images\bowskel bitmaps\walking w000" bmp 8 T 106 76 48

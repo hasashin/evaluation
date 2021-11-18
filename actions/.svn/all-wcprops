@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/evaLUAtion-lynx/!svn/ver/81/evaLUAtion/actions
+END
+ShootAtAction.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/evaLUAtion-lynx/!svn/ver/65/evaLUAtion/actions/ShootAtAction.cpp
+END
+Action.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/evaLUAtion-lynx/!svn/ver/81/evaLUAtion/actions/Action.h
+END
+ChangeWeaponAction.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/evaLUAtion-lynx/!svn/ver/80/evaLUAtion/actions/ChangeWeaponAction.h
+END
+DieAction.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/evaLUAtion-lynx/!svn/ver/80/evaLUAtion/actions/DieAction.h
+END
+ReloadAction.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/evaLUAtion-lynx/!svn/ver/65/evaLUAtion/actions/ReloadAction.cpp
+END
+ShootAtAction.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/evaLUAtion-lynx/!svn/ver/80/evaLUAtion/actions/ShootAtAction.h
+END
+WaitAction.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/evaLUAtion-lynx/!svn/ver/80/evaLUAtion/actions/WaitAction.h
+END
+ReloadAction.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/evaLUAtion-lynx/!svn/ver/80/evaLUAtion/actions/ReloadAction.h
+END
+Action.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/evaLUAtion-lynx/!svn/ver/66/evaLUAtion/actions/Action.cpp
+END
+ChangeWeaponAction.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/evaLUAtion-lynx/!svn/ver/66/evaLUAtion/actions/ChangeWeaponAction.cpp
+END

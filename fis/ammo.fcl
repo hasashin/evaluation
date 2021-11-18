@@ -1,0 +1,63 @@
+(* FCL File Created From FFLL Model : Thu Sep 06 10:39:12 2001 *)
+FUNCTION_BLOCK
+
+VAR_INPUT
+	RailgunAmmo	REAL; (* RANGE(0 .. 50) *) 
+	RocketLuncherAmmo	REAL; (* RANGE(0 .. 100) *) 
+	ShotgunAmmo	REAL; (* RANGE(0 .. 150) *) 
+END_VAR
+
+VAR_OUTPUT
+	Ammo	REAL; (* RANGE(0 .. 100) *) 
+END_VAR
+
+FUZZIFY RailgunAmmo
+	TERM Little := (0, 1) (3, 1) (7, 0) ;
+	TERM Average := (3, 0) (7, 1) (15, 0) ;
+	TERM Much := (7, 0) (15, 1) (50, 1) ;
+END_FUZZIFY
+
+FUZZIFY RocketLuncherAmmo
+	TERM Little := (0, 1) (5, 1) (15, 0) ;
+	TERM Average := (5, 0) (15, 1) (25, 0) ;
+	TERM Much := (15, 0) (25, 1) (100, 1) ;
+END_FUZZIFY
+
+FUZZIFY ShotgunAmmo
+	TERM Little := (0, 1) (5, 1) (10, 0) ;
+	TERM Average := (5, 0) (10, 1) (20, 0) ;
+	TERM Much := (10, 0) (20, 1) (150, 1) ;
+END_FUZZIFY
+
+FUZZIFY Ammo
+	TERM NotMuch := (0, 1) (0, 1) (50, 0) ;
+	TERM Enough := (0, 0) (50, 1) (100, 0) ;
+	TERM Lots := (50, 0) (100, 1) (100, 1) ;
+END_FUZZIFY
+
+DEFUZZIFY valve
+	METHOD: CoG;
+END_DEFUZZIFY
+
+RULEBLOCK first
+	AND:MIN;
+	ACCUM:MAX;
+	RULE 0: IF Little AND Little AND Little THEN NotMuch;
+	RULE 1: IF Average AND Average AND Average THEN Lots;
+	RULE 2: IF Much AND Much AND Much THEN Lots;
+	RULE 3: IF Much AND Little AND Little THEN Enough;
+	RULE 4: IF Little AND Much AND Little THEN Enough;
+	RULE 5: IF Little AND Little AND Much THEN Enough;
+	RULE 6: IF Average AND Little AND Little THEN NotMuch;
+	RULE 7: IF Little AND Average AND Little THEN NotMuch;
+	RULE 8: IF Little AND Little AND Average THEN NotMuch;
+	RULE 9: IF Average AND Average AND Little THEN Enough;
+	RULE 10: IF Little AND Average AND Average THEN Enough;
+	RULE 11: IF Average AND Little AND Average THEN Enough;
+	RULE 12: IF Average AND Much AND Average THEN Lots;
+	RULE 13: IF Average AND Average AND Much THEN Lots;
+	RULE 14: IF Much AND Average AND Average THEN Lots;
+END_RULEBLOCK
+
+END_FUNCTION_BLOCK
+

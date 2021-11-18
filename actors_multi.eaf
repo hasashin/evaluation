@@ -1,0 +1,11 @@
+Lynx			ms		1	35	35	skeleton.bow.
+Bodyguard		sc:task3.lua	1	75	35	skeleton.bow.
+Bodyguard		sc:task3.lua	1	85	35	skeleton.bow.
+dumbScript2		sc:dumb6.lua	2	150	250	skeleton.bow.
+dumbScript3		sc:dumb6.lua	2	430	35	skeleton.bow.
+dumbScript4		sc:dumb6.lua	2	460	55	skeleton.bow.
+dumbScript5		sc:dumb6.lua	2	440	65	skeleton.bow.
+dumbScript6		sc:dumb6.lua	2	430	365	skeleton.bow.
+dumbScript7		sc:dumb6.lua	2	390	385	skeleton.bow.
+dumbScript8		sc:dumb6.lua	2	300	270	skeleton.bow.
+dumbScript9		sc:dumb6.lua	2	30	305	skeleton.bow.

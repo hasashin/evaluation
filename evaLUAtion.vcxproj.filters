@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\luabind">
+      <UniqueIdentifier>{378b9f70-d638-4228-a66c-62d8329cb4a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Actions">
+      <UniqueIdentifier>{326a7552-a1f6-4fdf-aa98-f02cd39c9aae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graphics">
+      <UniqueIdentifier>{2e786d20-96ad-4ae1-bba2-e2f958ef0649}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Entities">
+      <UniqueIdentifier>{662c6618-76a2-45a4-babc-bd13878acb42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Agents">
+      <UniqueIdentifier>{a7a6e59e-5102-4106-8f74-dd61e7666df7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Main">
+      <UniqueIdentifier>{dfc46130-ca4e-42e5-871e-f66b39c28faf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Actions">
+      <UniqueIdentifier>{5e435ffb-0221-489e-8d8f-af4ad953f860}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graphics">
+      <UniqueIdentifier>{4892b219-f9a6-4270-89cf-3ee87305790e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Agents">
+      <UniqueIdentifier>{a3cf4815-7159-43da-9e06-ad59a4952be0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Entities">
+      <UniqueIdentifier>{7e93ac7b-6cae-49ce-9604-a73f0927eb68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Main">
+      <UniqueIdentifier>{9cff04bf-ced4-4c42-a646-0b4473fa61c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="actions\Action.cpp">
+      <Filter>Source Files\Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="actions\ChangeWeaponAction.cpp">
+      <Filter>Source Files\Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="actions\ReloadAction.cpp">
+      <Filter>Source Files\Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="actions\ShootAtAction.cpp">
+      <Filter>Source Files\Actions</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\Graphics.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\ImagesManager.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\ResourceInfo.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\SDLFrontend.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\UserInteface.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="entities\Actor.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="entities\CustomShell.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="entities\Entity.cpp">
+      <Filter>Source Files\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="agents\ActorInfo.cpp">
+      <Filter>Source Files\Agents</Filter>
+    </ClCompile>
+    <ClCompile Include="agents\ActorKnowledge.cpp">
+      <Filter>Source Files\Agents</Filter>
+    </ClCompile>
+    <ClCompile Include="agents\LuaAgent.cpp">
+      <Filter>Source Files\Agents</Filter>
+    </ClCompile>
+    <ClCompile Include="agents\MouseAgent.cpp">
+      <Filter>Source Files\Agents</Filter>
+    </ClCompile>
+    <ClCompile Include="agents\PlayerAgent.cpp">
+      <Filter>Source Files\Agents</Filter>
+    </ClCompile>
+    <ClCompile Include="main\Configuration.cpp">
+      <Filter>Source Files\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="main\Game.cpp">
+      <Filter>Source Files\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="main\GameFactory.cpp">
+      <Filter>Source Files\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="main\Input.cpp">
+      <Filter>Source Files\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="main\Misc.cpp">
+      <Filter>Source Files\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="main\Navigation.cpp">
+      <Filter>Source Files\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\class.cpp">
+      <Filter>Source Files\luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\class_info.cpp">
+      <Filter>Source Files\luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\class_registry.cpp">
+      <Filter>Source Files\luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\class_rep.cpp">
+      <Filter>Source Files\luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\create_class.cpp">
+      <Filter>Source Files\luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\error.cpp">
+      <Filter>Source Files\luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\exception_handler.cpp">
+      <Filter>Source Files\luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\function.cpp">
+      <Filter>Source Files\luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\inheritance.cpp">
+      <Filter>Source Files\luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\link_compatibility.cpp">
+      <Filter>Source Files\luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\object_rep.cpp">
+      <Filter>Source Files\luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\open.cpp">
+      <Filter>Source Files\luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\pcall.cpp">
+      <Filter>Source Files\luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\scope.cpp">
+      <Filter>Source Files\luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\stack_content_by_name.cpp">
+      <Filter>Source Files\luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\weak_ref.cpp">
+      <Filter>Source Files\luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\wrapper_base.cpp">
+      <Filter>Source Files\luabind</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="actions\Action.h">
+      <Filter>Header Files\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="actions\ChangeWeaponAction.h">
+      <Filter>Header Files\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="actions\DieAction.h">
+      <Filter>Header Files\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="actions\ReloadAction.h">
+      <Filter>Header Files\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="actions\ShootAtAction.h">
+      <Filter>Header Files\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="actions\WaitAction.h">
+      <Filter>Header Files\Actions</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\Graphics.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\GraphicsException.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\GraphicsFrontend.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\ImagesManager.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\ResourceInfo.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\SDLFrontend.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\UserInterface.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="agents\AbstractAgent.h">
+      <Filter>Header Files\Agents</Filter>
+    </ClInclude>
+    <ClInclude Include="agents\ActorInfo.h">
+      <Filter>Header Files\Agents</Filter>
+    </ClInclude>
+    <ClInclude Include="agents\ActorKnowledge.h">
+      <Filter>Header Files\Agents</Filter>
+    </ClInclude>
+    <ClInclude Include="agents\FuzzyAgent.h">
+      <Filter>Header Files\Agents</Filter>
+    </ClInclude>
+    <ClInclude Include="agents\LuaAgent.h">
+      <Filter>Header Files\Agents</Filter>
+    </ClInclude>
+    <ClInclude Include="agents\MouseAgent.h">
+      <Filter>Header Files\Agents</Filter>
+    </ClInclude>
+    <ClInclude Include="agents\ObjectInfo.h">
+      <Filter>Header Files\Agents</Filter>
+    </ClInclude>
+    <ClInclude Include="agents\PlayerAgent.h">
+      <Filter>Header Files\Agents</Filter>
+    </ClInclude>
+    <ClInclude Include="entities\Actor.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="entities\ArmourPack.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="entities\BoundingBox.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="entities\CustomShell.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="entities\Entity.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="entities\HealthPack.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="entities\Trigger.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="entities\Wall.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="entities\WeaponPack.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="main\AbstractFrontend.h">
+      <Filter>Header Files\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="main\Configuration.h">
+      <Filter>Header Files\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="main\Game.h">
+      <Filter>Header Files\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="main\GameFactory.h">
+      <Filter>Header Files\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="main\Input.h">
+      <Filter>Header Files\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="main\Misc.h">
+      <Filter>Header Files\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="main\Navigation.h">
+      <Filter>Header Files\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="main\NavigationNode.h">
+      <Filter>Header Files\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="main\RandomGenerator.h">
+      <Filter>Header Files\Main</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

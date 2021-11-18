@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/evaLUAtion-lynx/!svn/ver/81/evaLUAtion/graphics
+END
+Graphics.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/evaLUAtion-lynx/!svn/ver/65/evaLUAtion/graphics/Graphics.cpp
+END
+ImagesManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/evaLUAtion-lynx/!svn/ver/50/evaLUAtion/graphics/ImagesManager.cpp
+END
+SDLFrontend.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/evaLUAtion-lynx/!svn/ver/81/evaLUAtion/graphics/SDLFrontend.cpp
+END
+ResourceInfo.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/evaLUAtion-lynx/!svn/ver/50/evaLUAtion/graphics/ResourceInfo.cpp
+END
+GraphicsException.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/evaLUAtion-lynx/!svn/ver/47/evaLUAtion/graphics/GraphicsException.h
+END
+UserInterface.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/evaLUAtion-lynx/!svn/ver/80/evaLUAtion/graphics/UserInterface.h
+END
+Graphics.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/evaLUAtion-lynx/!svn/ver/80/evaLUAtion/graphics/Graphics.h
+END
+GraphicsFrontend.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/evaLUAtion-lynx/!svn/ver/50/evaLUAtion/graphics/GraphicsFrontend.h
+END
+ImagesManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/evaLUAtion-lynx/!svn/ver/50/evaLUAtion/graphics/ImagesManager.h
+END
+SDLFrontend.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/evaLUAtion-lynx/!svn/ver/80/evaLUAtion/graphics/SDLFrontend.h
+END
+ResourceInfo.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/evaLUAtion-lynx/!svn/ver/47/evaLUAtion/graphics/ResourceInfo.h
+END
+UserInteface.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/evaLUAtion-lynx/!svn/ver/81/evaLUAtion/graphics/UserInteface.cpp
+END

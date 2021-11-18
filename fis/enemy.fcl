@@ -1,0 +1,50 @@
+(* FCL File Created From FFLL Model : Thu Sep 06 10:39:12 2001 *)
+FUNCTION_BLOCK
+
+VAR_INPUT
+	Distance	REAL; (* RANGE(0 .. 1000) *) 
+	Enemy_Health	REAL; (* RANGE(0 .. 101) *) 
+END_VAR
+
+VAR_OUTPUT
+	Threat	REAL; (* RANGE(0 .. 100) *) 
+END_VAR
+
+FUZZIFY Distance
+	TERM Small := (0, 1) (50, 1) (100, 0) ;
+	TERM Normal := (50, 0) (150, 1) (250, 0) ;
+	TERM Big := (150, 0) (250, 1) (1000, 1) ;
+END_FUZZIFY
+
+FUZZIFY Enemy_Health
+	TERM Near_Death := (0, 1) (30, 1) (50, 0) ;
+	TERM Good := (40, 0) (65, 1) (80, 0) ;
+	TERM Excellent := (65, 0) (80, 1) (101, 1) ;
+END_FUZZIFY
+
+FUZZIFY Threat
+	TERM Small := (0, 1) (0, 1) (50, 0) ;
+	TERM Normal := (0, 0) (50, 1) (100, 0) ;
+	TERM High := (50, 0) (100, 1) (100, 1) ;
+END_FUZZIFY
+
+DEFUZZIFY valve
+	METHOD: CoG;
+END_DEFUZZIFY
+
+RULEBLOCK first
+	AND:MIN;
+	ACCUM:MAX;
+	RULE 0: IF Small AND Good THEN High;
+	RULE 1: IF Small AND Excellent THEN High;
+	RULE 2: IF Small AND Near_Death THEN Normal;
+	RULE 3: IF Normal AND Good THEN Normal;
+	RULE 4: IF Normal AND Excellent THEN High;
+	RULE 5: IF Normal AND Near_Death THEN Small;
+	RULE 6: IF Big AND Good THEN Small;
+	RULE 7: IF Big AND Excellent THEN Normal;
+	RULE 8: IF Big AND Near_Death THEN Small;
+END_RULEBLOCK
+
+END_FUNCTION_BLOCK
+

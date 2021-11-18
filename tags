@@ -1,0 +1,680 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ABSTRACT_AGENT_H	agents/AbstractAgent.h	2;"	d
+ABSTRACT_FRONTEND_H	main/AbstractFrontend.h	2;"	d
+ACTION_H	actions/Action.h	2;"	d
+ACTOR_H	entities/Actor.h	3;"	d
+ACTOR_KNOWLEDGE_H	agents/ActorKnowledge.h	2;"	d
+ARMOUR_PACK_H	entities/ArmourPack.h	3;"	d
+AStarNode	main/Navigation.h	/^typedef boost::tuples::tuple<int, double, double, double, int> AStarNode;$/;"	t
+AbstractAgent	agents/AbstractAgent.h	/^class AbstractAgent$/;"	c
+AbstractFrontend	main/AbstractFrontend.h	/^class AbstractFrontend$/;"	c
+Action	actions/Action.cpp	/^Action::Action() : cosOfPiBy8(0.92387953251128675612818318939679) {$/;"	f	class:Action
+Action	actions/Action.h	/^class Action$/;"	c
+ActionType	main/Misc.h	/^	enum ActionType {$/;"	g	class:Enumerations
+Actor	entities/Actor.cpp	/^Actor::Actor(AbstractAgent * agent, unsigned int team, Vector4d position) : Entity() {$/;"	f	class:Actor
+Actor	entities/Actor.h	/^class Actor : public Entity$/;"	c
+ActorInfo	agents/ActorInfo.cpp	/^ActorInfo::ActorInfo(Actor * actor) : name(actor->getName()) {$/;"	f	class:ActorInfo
+ActorInfo	agents/ActorInfo.h	/^	ActorInfo() {}$/;"	f	class:ActorInfo
+ActorInfo	agents/ActorInfo.h	/^class ActorInfo$/;"	c
+ActorKnowledge	agents/ActorKnowledge.cpp	/^ActorKnowledge::ActorKnowledge(Actor * actor) : actor(actor) {$/;"	f	class:ActorKnowledge
+ActorKnowledge	agents/ActorKnowledge.h	/^class ActorKnowledge\/\/ TODO ? derive form ActorInfo ?$/;"	c
+Arc	main/NavigationNode.h	/^	typedef std::pair<int, double> Arc;$/;"	t	class:NavigationNode
+Armour	entities/Trigger.h	/^		Armour,$/;"	e	enum:Trigger::TriggerType
+ArmourPack	entities/ArmourPack.h	/^	ArmourPack(double x, double y, int index, int armour = 50) : Trigger(x, y, index) {$/;"	f	class:ArmourPack
+ArmourPack	entities/ArmourPack.h	/^class ArmourPack : public Trigger$/;"	c
+AtFunctionType	agents/LuaAgent.cpp	/^typedef std::vector<ActorInfo>::reference (std::vector<ActorInfo>:: *AtFunctionType)(std::vector<ActorInfo>::size_type);$/;"	t	class:std::vector	file:
+BOUNDING_BOX_H	entities/BoundingBox.h	3;"	d
+BoundingBox	entities/BoundingBox.h	/^	BoundingBox(std::vector<Vector4d> inPoints) {$/;"	f	class:BoundingBox
+BoundingBox	entities/BoundingBox.h	/^class BoundingBox \/\/TODO uporz¹dkowaæ i opisaæ t¹ klasê, zlikwidowaæ copypaste -> Wall.h$/;"	c
+CC	Makefile	/^CC=g++$/;"	m
+CFLAGS	Makefile	/^CFLAGS= -g -std=c++11 -I. -I\/usr\/include\/SDL -I\/usr\/include\/lua5.2\/ -Wnarrowing -Wreturn-local-addr  `sdl-config --libs` -lSDL_ttf -lSDL_image -lboost_program_options -lSDL_gfx -lluabind -llua5.2 $/;"	m
+CHANGE_WEAPON_ACTION_H	actions/ChangeWeaponAction.h	2;"	d
+CONFIGURATION_H	main/Configuration.h	2;"	d
+CUSTOM_SHELL_H	entities/CustomShell.h	2;"	d
+Chaingun	main/Misc.h	/^		Chaingun,$/;"	e	enum:Enumerations::WeaponType
+ChangeWeaponAction	actions/ChangeWeaponAction.cpp	/^ChangeWeaponAction::ChangeWeaponAction(Enumerations::WeaponType weapon) : Action() {$/;"	f	class:ChangeWeaponAction
+ChangeWeaponAction	actions/ChangeWeaponAction.h	/^class ChangeWeaponAction : public Action$/;"	c
+ChangingWeapon	main/Misc.h	/^		ChangingWeapon,$/;"	e	enum:Enumerations::ActionType
+Color	graphics/ResourceInfo.h	/^struct Color$/;"	s
+ConfDouble	main/Configuration.h	9;"	d
+ConfInt	main/Configuration.h	8;"	d
+ConfIsSet	main/Configuration.h	7;"	d
+ConfString	main/Configuration.h	10;"	d
+Configuration	main/Configuration.cpp	/^Configuration::Configuration() {$/;"	f	class:Configuration
+Configuration	main/Configuration.h	/^class Configuration$/;"	c
+CustomShell	entities/CustomShell.cpp	/^CustomShell::CustomShell(Entity * src, Vector4d destination, bool stopAtDestination, GameTime fireTime, int timeToInvalidate, double speed, double damage, double radius, unsigned int color) : Entity() {$/;"	f	class:CustomShell
+CustomShell	entities/CustomShell.h	/^class CustomShell : public Entity$/;"	c
+DIE_ACTION_H	actions/DieAction.h	2;"	d
+DieAction	actions/DieAction.h	/^	DieAction() : Action() {$/;"	f	class:DieAction
+DieAction	actions/DieAction.h	/^class DieAction : public Action$/;"	c
+Dying	main/Misc.h	/^		Dying,$/;"	e	enum:Enumerations::ActionType
+ENTITY_H	entities/Entity.h	3;"	d
+ERROROUS_RESOURCE_NAME	graphics/ImagesManager.h	11;"	d
+Entity	entities/Entity.cpp	/^Entity::Entity() {$/;"	f	class:Entity
+Entity	entities/Entity.h	/^class Entity \/\/TODO kolizje wywaliï¿½ stï¿½d?$/;"	c
+Enumerations	main/Misc.h	/^class Enumerations {$/;"	c
+FUZZY_AGENT_H	agents/FuzzyAgent.h	3;"	d
+FuzzyAgent	agents/FuzzyAgent.cpp	/^FuzzyAgent::FuzzyAgent() : PlayerAgent() {$/;"	f	class:FuzzyAgent
+FuzzyAgent	agents/FuzzyAgent.h	/^class FuzzyAgent : public PlayerAgent$/;"	c
+GAME_FACTORY_H	main/GameFactory.h	2;"	d
+GAME_H	main/Game.h	2;"	d
+GAME_TIME_BY_SECOND	main/Misc.h	7;"	d
+GAME_TIME_BY_TIME_UNIT	main/Misc.h	5;"	d
+GRAPHICS_EXCEPTION_H	graphics/GraphicsException.h	2;"	d
+GRAPHICS_FRONTEND_H	graphics/GraphicsFrontend.h	2;"	d
+GRAPHICS_H	graphics/Graphics.h	2;"	d
+Game	main/Game.cpp	/^Game::Game() {$/;"	f	class:Game
+Game	main/Game.h	/^class Game $/;"	c
+GameFactory	main/GameFactory.h	/^	GameFactory() {}$/;"	f	class:GameFactory
+GameFactory	main/GameFactory.h	/^class GameFactory $/;"	c
+GameTime	main/Misc.h	/^typedef unsigned long long int GameTime;$/;"	t
+Graphics	graphics/Graphics.cpp	/^Graphics::Graphics() {$/;"	f	class:Graphics
+Graphics	graphics/Graphics.h	/^class Graphics$/;"	c
+GraphicsException	graphics/GraphicsException.h	/^	GraphicsException(const char * pTxt) : pReason(pTxt) {};$/;"	f	class:GraphicsException
+GraphicsException	graphics/GraphicsException.h	/^class GraphicsException {$/;"	c
+GraphicsFrontend	graphics/GraphicsFrontend.h	/^class GraphicsFrontend : public AbstractFrontend$/;"	c
+H99	agents/FuzzyAgent.cpp	10;"	d	file:
+HEALTH_PACK_H	entities/HealthPack.h	3;"	d
+Health	entities/Trigger.h	/^		Health$/;"	e	enum:Trigger::TriggerType
+HealthPack	entities/HealthPack.h	/^	HealthPack(double x, double y, int index, int health = 25) : Trigger(x, y, index) {$/;"	f	class:HealthPack
+HealthPack	entities/HealthPack.h	/^class HealthPack : public Trigger$/;"	c
+IMAGES_MANAGER_H	graphics/ImagesManager.h	2;"	d
+INPUT_H	main/Input.h	2;"	d
+ImagesManager	graphics/ImagesManager.h	/^	ImagesManager() : maxMemory(1024*1024*10), memory(0) {}$/;"	f	class:ImagesManager
+ImagesManager	graphics/ImagesManager.h	/^class ImagesManager$/;"	c
+Input	main/Input.h	/^class Input$/;"	c
+IntPair	graphics/ImagesManager.h	/^typedef boost::tuples::tuple <int, int, Vector4d> IntPair;$/;"	t
+IntPair2SDL_SurfaceMap	graphics/ImagesManager.h	/^typedef std::map<IntPair, SDL_Surface*> IntPair2SDL_SurfaceMap;$/;"	t
+LUA_AGENT_H	agents/LuaAgent.h	2;"	d
+LuaAgent	agents/LuaAgent.cpp	/^LuaAgent::LuaAgent(std::string filename, lua_State * pL) {$/;"	f	class:LuaAgent
+LuaAgent	agents/LuaAgent.h	/^class LuaAgent : public PlayerAgent$/;"	c
+MISC_H	main/Misc.h	2;"	d
+MOUSE_AGENT_H	agents/MouseAgent.h	2;"	d
+MouseAgent	agents/MouseAgent.h	/^class MouseAgent : public PlayerAgent$/;"	c
+Moving	main/Misc.h	/^		Moving,$/;"	e	enum:Enumerations::ActionType
+NACTOR_INFO_H	agents/ActorInfo.h	2;"	d
+NAVIGATION_H	main/Navigation.h	3;"	d
+NAVIGATION_NODE_H	main/NavigationNode.h	3;"	d
+Navigation	main/Navigation.h	/^	Navigation(int indexNr) {$/;"	f	class:Navigation
+Navigation	main/Navigation.h	/^class Navigation {$/;"	c
+NavigationNode	main/NavigationNode.h	/^	NavigationNode(double x, double y, int index) {$/;"	f	class:NavigationNode
+NavigationNode	main/NavigationNode.h	/^class NavigationNode {$/;"	c
+OBJECT_INFO_H	agents/ObjectInfo.h	2;"	d
+ObjectInfo	agents/ObjectInfo.h	/^class ObjectInfo$/;"	c
+PI_CONST	main/Misc.h	8;"	d
+PLAYER_AGENT_H	agents/PlayerAgent.h	3;"	d
+PlayerAgent	agents/PlayerAgent.h	/^	PlayerAgent() {$/;"	f	class:PlayerAgent
+PlayerAgent	agents/PlayerAgent.h	/^class PlayerAgent : public AbstractAgent$/;"	c
+RANDOM_GENERATOR_H	main/RandomGenerator.h	2;"	d
+RELOAD_ACTION_H	actions/ReloadAction.h	2;"	d
+RESOURCE_INFO_H	graphics/ResourceInfo.h	2;"	d
+Railgun	main/Misc.h	/^		Railgun,$/;"	e	enum:Enumerations::WeaponType
+RandomDouble	main/RandomGenerator.h	8;"	d
+RandomGenerator	main/RandomGenerator.h	/^	RandomGenerator() {$/;"	f	class:RandomGenerator
+RandomGenerator	main/RandomGenerator.h	/^class RandomGenerator $/;"	c
+RandomNormal	main/RandomGenerator.h	9;"	d
+Rectangle	graphics/ResourceInfo.h	/^	Rectangle() $/;"	f	struct:Rectangle
+Rectangle	graphics/ResourceInfo.h	/^struct Rectangle$/;"	s
+ReloadAction	actions/ReloadAction.cpp	/^ReloadAction::ReloadAction(int cost) : Action() {$/;"	f	class:ReloadAction
+ReloadAction	actions/ReloadAction.h	/^class ReloadAction : public Action$/;"	c
+Reloading	main/Misc.h	/^		Reloading,$/;"	e	enum:Enumerations::ActionType
+ResourceException	graphics/ResourceInfo.h	/^	ResourceException(const char * pTxt) : pReason(pTxt) {};$/;"	f	class:ResourceException
+ResourceException	graphics/ResourceInfo.h	/^class ResourceException {$/;"	c
+ResourceInfo	graphics/ResourceInfo.cpp	/^ResourceInfo::ResourceInfo(std::string resourceName, std::string filenameBase, std::string extension, int frames, bool transparent, Color color, Rectangle rectangle)$/;"	f	class:ResourceInfo
+ResourceInfo	graphics/ResourceInfo.h	/^class ResourceInfo$/;"	c
+RocketLuncher	main/Misc.h	/^		RocketLuncher,$/;"	e	enum:Enumerations::WeaponType
+SDLFrontend	graphics/SDLFrontend.h	/^	SDLFrontend(Graphics * igraphics) : graphics(igraphics) {}$/;"	f	class:SDLFrontend
+SDLFrontend	graphics/SDLFrontend.h	/^class SDLFrontend : public GraphicsFrontend$/;"	c
+SDL_FRONTEND_H	graphics/SDLFrontend.h	2;"	d
+SHOOT_AT_ACTION_H	actions/ShootAtAction.h	2;"	d
+ShootAtAction	actions/ShootAtAction.cpp	/^ShootAtAction::ShootAtAction(Vector4d target) : Action() {$/;"	f	class:ShootAtAction
+ShootAtAction	actions/ShootAtAction.h	/^class ShootAtAction : public Action$/;"	c
+Shooting	main/Misc.h	/^		Shooting,$/;"	e	enum:Enumerations::ActionType
+Shotgun	main/Misc.h	/^		Shotgun,$/;"	e	enum:Enumerations::WeaponType
+Strategy	agents/FuzzyAgent.h	/^	enum Strategy {$/;"	g	class:FuzzyAgent
+TIME_UNIT_BY_SECOND	main/Misc.h	6;"	d
+TRIGGER_H	entities/Trigger.h	3;"	d
+Team2LuaEnvMap	main/Game.h	/^typedef std::map<int, lua_State*> Team2LuaEnvMap;$/;"	t
+TimeUnit	main/Misc.h	/^typedef unsigned long long int TimeUnit;$/;"	t
+Trigger	entities/Trigger.h	/^	Trigger(double x, double y, int index) : Entity() {$/;"	f	class:Trigger
+Trigger	entities/Trigger.h	/^class Trigger : public Entity$/;"	c
+TriggerType	entities/Trigger.h	/^	enum TriggerType {$/;"	g	class:Trigger
+USER_INTERFACE_H	graphics/UserInterface.h	2;"	d
+UserInterface	graphics/UserInterface.h	/^	UserInterface(Graphics * graphics) {$/;"	f	class:UserInterface
+UserInterface	graphics/UserInterface.h	/^class UserInterface$/;"	c
+Vector4d	main/Misc.h	/^	Vector4d (const Vector4d &vect) {$/;"	f	struct:Vector4d
+Vector4d	main/Misc.h	/^	Vector4d (double x = 0.0, double y = 0.0, double z = 0.0, double w = 0.0) {$/;"	f	struct:Vector4d
+Vector4d	main/Misc.h	/^struct Vector4d {$/;"	s
+WAIT_ACTION_H	actions/WaitAction.h	2;"	d
+WALL_H	entities/Wall.h	3;"	d
+WEAPON_PACK_H	entities/WeaponPack.h	3;"	d
+WaitAction	actions/WaitAction.h	/^	WaitAction() : Action() {$/;"	f	class:WaitAction
+WaitAction	actions/WaitAction.h	/^class WaitAction : public Action$/;"	c
+Waiting	main/Misc.h	/^		Waiting$/;"	e	enum:Enumerations::ActionType
+Wall	entities/Wall.h	/^	Wall( Vector4d startPoint, Vector4d endPoint ) : Entity() {$/;"	f	class:Wall
+Wall	entities/Wall.h	/^class Wall : public Entity$/;"	c
+Weapon	entities/Trigger.h	/^		Weapon,$/;"	e	enum:Trigger::TriggerType
+WeaponPack	entities/WeaponPack.h	/^	WeaponPack(double x, double y, Enumerations::WeaponType type, int index) : Trigger(x, y, index) {$/;"	f	class:WeaponPack
+WeaponPack	entities/WeaponPack.h	/^class WeaponPack : public Trigger$/;"	c
+WeaponSize	main/Misc.h	/^		WeaponSize$/;"	e	enum:Enumerations::WeaponType
+WeaponType	main/Misc.h	/^	enum WeaponType {$/;"	g	class:Enumerations
+act	entities/Actor.cpp	/^void Actor::act(GameTime time) {$/;"	f	class:Actor
+actionCode	actions/Action.h	/^	std::string actionCode;$/;"	m	class:Action
+actionStarted	actions/Action.h	/^	GameTime actionStarted;$/;"	m	class:Action
+actionType	actions/Action.h	/^	Enumerations::ActionType actionType;$/;"	m	class:Action
+activateTime	entities/Trigger.h	/^	GameTime activateTime;$/;"	m	class:Trigger
+active	entities/Trigger.h	/^	bool active;$/;"	m	class:Trigger
+actor	agents/ActorKnowledge.h	/^	Actor * actor;$/;"	m	class:ActorKnowledge
+actorKnowledge	entities/Actor.h	/^	std::unique_ptr<ActorKnowledge> actorKnowledge;$/;"	m	class:Actor
+actors	main/Game.h	/^	std::vector<Actor*> actors;$/;"	m	class:Game
+addActor	main/GameFactory.cpp	/^void GameFactory::addActor(Actor * actor) {$/;"	f	class:GameFactory
+addAmmo	entities/Actor.h	/^	void addAmmo(Enumerations::WeaponType type, int a) {$/;"	f	class:Actor
+addArmour	entities/Actor.h	/^	void addArmour(int a) {$/;"	f	class:Actor
+addFrontend	main/Game.cpp	/^void Game::addFrontend(AbstractFrontend * frontend) {$/;"	f	class:Game
+addHealth	entities/Actor.h	/^	void addHealth(int h) {$/;"	f	class:Actor
+addObject	main/GameFactory.cpp	/^void GameFactory::addObject(Entity * obj) {$/;"	f	class:GameFactory
+addOptions	main/Configuration.cpp	/^void Configuration::addOptions(int argc, char **argv) {$/;"	f	class:Configuration
+addOptions	main/Configuration.cpp	/^void Configuration::addOptions(std::string fileName) {$/;"	f	class:Configuration
+addResourceInfo	graphics/ImagesManager.cpp	/^int ImagesManager::addResourceInfo(std::string resourceName, std::string filenameBase, std::string extension, int frames, bool transparent, Color color, Rectangle rectangle)$/;"	f	class:ImagesManager
+agent	entities/Actor.h	/^	AbstractAgent * agent;$/;"	m	class:Actor
+agent	graphics/UserInterface.h	/^	MouseAgent * agent;$/;"	m	class:UserInterface
+ammo	agents/FuzzyAgent.h	/^		ammo,$/;"	e	enum:FuzzyAgent::Strategy
+ammo	entities/Actor.h	/^	int ammo[ Enumerations::WeaponType::WeaponSize ];$/;"	m	class:Actor
+ammoChild	agents/FuzzyAgent.h	/^	int ammoModel, ammoChild;$/;"	m	class:FuzzyAgent
+ammoLeft	entities/Actor.h	/^	int ammoLeft(Enumerations::WeaponType type) {\/\/TODO this method is duplicaded -> getAmmo$/;"	f	class:Actor
+ammoModel	agents/FuzzyAgent.h	/^	int ammoModel, ammoChild;$/;"	m	class:FuzzyAgent
+ammoPacks	actions/ShootAtAction.cpp	/^const int ShootAtAction::ammoPacks[ Enumerations::WeaponType::WeaponSize ] = { 100, 5, 10, 15 };$/;"	m	class:ShootAtAction	file:
+ammoPacks	actions/ShootAtAction.h	/^	static const int ammoPacks[ Enumerations::WeaponType::WeaponSize ];$/;"	m	class:ShootAtAction
+anyHealthPack	agents/FuzzyAgent.cpp	/^	Trigger * FuzzyAgent::anyHealthPack() {$/;"	f	class:FuzzyAgent
+anyRayCrateColision	entities/Entity.cpp	/^bool Entity::anyRayCrateColision(Vector4d displacementVector, Vector4d positionVector) {$/;"	f	class:Entity
+anyRayCrateColision	main/Navigation.cpp	/^bool Navigation::anyRayCrateColision(Vector4d displacementVector, Vector4d positionVector) {$/;"	f	class:Navigation
+anyWeaponPack	agents/FuzzyAgent.cpp	/^	Trigger * FuzzyAgent::anyWeaponPack() {$/;"	f	class:FuzzyAgent
+arc	actions/ShootAtAction.cpp	/^const double ShootAtAction::arc[ Enumerations::WeaponType::WeaponSize ] = { 0.7, 0.1, 0.3, 3.0 };$/;"	m	class:ShootAtAction	file:
+arc	actions/ShootAtAction.h	/^	static const double arc[ Enumerations::WeaponType::WeaponSize ];$/;"	m	class:ShootAtAction
+arcs	main/NavigationNode.h	/^	std::vector<Arc> arcs;$/;"	m	class:NavigationNode
+armour	agents/ActorInfo.h	/^	int armour;$/;"	m	class:ActorInfo
+armour	entities/Actor.h	/^	int armour;$/;"	m	class:Actor
+armour	entities/ArmourPack.h	/^	int armour;$/;"	m	class:ArmourPack
+attack	agents/FuzzyAgent.h	/^		attack,$/;"	e	enum:FuzzyAgent::Strategy
+b	graphics/ResourceInfo.h	/^	unsigned short b;$/;"	m	struct:Color
+blended	graphics/UserInterface.h	/^		blended$/;"	e	enum:UserInterface::textquality
+boundingBox	entities/Entity.h	/^	std::unique_ptr<BoundingBox> boundingBox;$/;"	m	class:Entity
+breakable	actions/Action.h	/^	bool breakable;$/;"	m	class:Action
+bulletFired	entities/Actor.h	/^	void bulletFired() {$/;"	f	class:Actor
+caption	main.cpp	/^char caption[100];$/;"	v
+checkColision	entities/BoundingBox.h	/^	bool checkColision(Vector4d position, BoundingBox * bbox, Vector4d bbposition) {$/;"	f	class:BoundingBox
+checkColision	entities/CustomShell.cpp	/^bool CustomShell::checkColision(Entity * entity, Vector4d distance) {$/;"	f	class:CustomShell
+checkColision	entities/Entity.h	/^	virtual bool checkColision(Entity * entity, Vector4d distance) {$/;"	f	class:Entity
+checkColision	entities/Trigger.h	/^	virtual bool checkColision(Entity * entity, Vector4d distance) {$/;"	f	class:Trigger
+checkColision	entities/Wall.h	/^	virtual bool checkColision(Entity * entity, Vector4d distance) {$/;"	f	class:Wall
+checkIntersection	entities/Actor.cpp	/^bool Actor::checkIntersection( Vector4d s1p1, Vector4d s1p2, Vector4d s2p1, Vector4d s2p2) {$/;"	f	class:Actor
+checkIntersection	entities/BoundingBox.h	/^	bool checkIntersection( Vector4d s1p1, Vector4d s1p2, Vector4d s2p1, Vector4d s2p2) {$/;"	f	class:BoundingBox
+checkIntersection	entities/Wall.h	/^	bool checkIntersection( Vector4d s1p1, Vector4d s1p2, Vector4d s2p1, Vector4d s2p2) {$/;"	f	class:Wall
+cmdline_options	main/Configuration.h	/^    boost::program_options::options_description cmdline_options;$/;"	m	class:Configuration
+color	actions/ShootAtAction.cpp	/^const unsigned int ShootAtAction::color[ Enumerations::WeaponType::WeaponSize ] = { 0x00FF00FF, 0x0000FFFF, 0xFF0000FF, 0x000000FF };$/;"	m	class:ShootAtAction	file:
+color	actions/ShootAtAction.h	/^	static const unsigned int color[ Enumerations::WeaponType::WeaponSize ];$/;"	m	class:ShootAtAction
+color	entities/Entity.h	/^	unsigned int color;$/;"	m	class:Entity
+config_file_options	main/Configuration.h	/^    boost::program_options::options_description config_file_options;$/;"	m	class:Configuration
+continueAction	agents/PlayerAgent.cpp	/^	void PlayerAgent::continueAction() {$/;"	f	class:PlayerAgent
+cosOfPiBy8	actions/Action.h	/^	const double cosOfPiBy8;$/;"	m	class:Action
+createActors	main/GameFactory.cpp	/^void GameFactory::createActors(UserInterface * ui) {$/;"	f	class:GameFactory
+createGame	main/GameFactory.cpp	/^void GameFactory::createGame(UserInterface * ui) {$/;"	f	class:GameFactory
+createLuaEnv	agents/LuaAgent.cpp	/^lua_State * LuaAgent::createLuaEnv() {$/;"	f	class:LuaAgent
+createMap	main/GameFactory.cpp	/^void GameFactory::createMap() {$/;"	f	class:GameFactory
+current	agents/PlayerAgent.h	/^	ActorKnowledge * current;$/;"	m	class:PlayerAgent
+currentAction	entities/Actor.h	/^	std::unique_ptr<Action> currentAction;$/;"	m	class:Actor
+currentStrategy	agents/FuzzyAgent.h	/^	Strategy currentStrategy;$/;"	m	class:FuzzyAgent
+currentWeapon	entities/Actor.h	/^	Enumerations::WeaponType currentWeapon;$/;"	m	class:Actor
+damage	actions/ShootAtAction.cpp	/^const double ShootAtAction::damage[ Enumerations::WeaponType::WeaponSize ] = { 5, 100, 50, 15 };$/;"	m	class:ShootAtAction	file:
+damage	actions/ShootAtAction.h	/^	static const double damage[ Enumerations::WeaponType::WeaponSize ];$/;"	m	class:ShootAtAction
+damage	entities/CustomShell.h	/^	double damage;$/;"	m	class:CustomShell
+defaultFont	graphics/UserInterface.h	/^	TTF_Font * defaultFont;$/;"	m	class:UserInterface
+defend	agents/FuzzyAgent.h	/^		defend,$/;"	e	enum:FuzzyAgent::Strategy
+destination	entities/CustomShell.h	/^	Vector4d destination;$/;"	m	class:CustomShell
+destroyLuaEnv	agents/LuaAgent.cpp	/^void LuaAgent::destroyLuaEnv(lua_State * pL) {$/;"	f	class:LuaAgent
+direction	agents/ActorInfo.h	/^	Vector4d direction;$/;"	m	class:ActorInfo
+direction	entities/Entity.h	/^	Vector4d direction;$/;"	m	class:Entity
+directionVector	entities/Actor.h	/^	Vector4d directionVector;$/;"	m	class:Actor
+done	main.cpp	/^bool done = false;$/;"	v
+dot	main/Misc.h	/^	double dot(const Vector4d & b) {$/;"	f	struct:Vector4d
+drawtext	graphics/UserInteface.cpp	/^SDL_Surface * UserInterface::drawtext(const char * text, Vector4d color, textquality quality, int useDefaultFont)$/;"	f	class:UserInterface
+dumb1onStart	dumb1.lua	/^function dumb1onStart( agent, actorKnowledge, time)$/;"	f
+dumb1whatTo	dumb1.lua	/^function dumb1whatTo( agent, actorKnowledge, time)$/;"	f
+dumb2onStart	dumb2.lua	/^function dumb2onStart( agent, actorKnowledge, time)$/;"	f
+dumb2whatTo	dumb2.lua	/^function dumb2whatTo( agent, actorKnowledge, time)$/;"	f
+dumb3onStart	dumb3.lua	/^function dumb3onStart( agent, actorKnowledge, time)$/;"	f
+dumb3whatTo	dumb3.lua	/^function dumb3whatTo( agent, actorKnowledge, time)$/;"	f
+dumb4onStart	dumb4.lua	/^function dumb4onStart( agent, actorKnowledge, time)$/;"	f
+dumb4whatTo	dumb4.lua	/^function dumb4whatTo( agent, actorKnowledge, time)$/;"	f
+dumb5onStart	dumb5.lua	/^function dumb5onStart( agent, actorKnowledge, time)$/;"	f
+dumb5whatTo	dumb5.lua	/^function dumb5whatTo( agent, actorKnowledge, time)$/;"	f
+dumb6onStart	dumb6.lua	/^function dumb6onStart( agent, actorKnowledge, time)$/;"	f
+dumb6whatTo	dumb6.lua	/^function dumb6whatTo( agent, actorKnowledge, time)$/;"	f
+dumb7onStart	dumb7.lua	/^function dumb7onStart( agent, actorKnowledge, time)$/;"	f
+dumb7whatTo	dumb7.lua	/^function dumb7whatTo( agent, actorKnowledge, time)$/;"	f
+dumb8onStart	dumb8.lua	/^function dumb8onStart( agent, actorKnowledge, time)$/;"	f
+dumb8whatTo	dumb8.lua	/^function dumb8whatTo( agent, actorKnowledge, time)$/;"	f
+endGame	main/Game.h	/^	void endGame() {$/;"	f	class:Game
+endPoint	entities/Wall.h	/^	Vector4d endPoint;$/;"	m	class:Wall
+end_game	main/Game.h	/^	std::chrono::time_point<std::chrono::system_clock> end_game;$/;"	m	class:Game
+enemyChild	agents/FuzzyAgent.h	/^	int enemyModel, enemyChild;$/;"	m	class:FuzzyAgent
+enemyModel	agents/FuzzyAgent.h	/^	int enemyModel, enemyChild;$/;"	m	class:FuzzyAgent
+entity	agents/ObjectInfo.h	/^	Entity * entity;$/;"	m	class:ObjectInfo
+evaluateAmmo	agents/FuzzyAgent.cpp	/^double FuzzyAgent::evaluateAmmo() {$/;"	f	class:FuzzyAgent
+evaluateEnemy	agents/FuzzyAgent.cpp	/^double FuzzyAgent::evaluateEnemy(double distance, double health) {$/;"	f	class:FuzzyAgent
+evaluateStrategy	agents/FuzzyAgent.cpp	/^double FuzzyAgent::evaluateStrategy(Strategy strategy, double threat, double ammo) {$/;"	f	class:FuzzyAgent
+evaluateWeapon	agents/FuzzyAgent.cpp	/^double FuzzyAgent::evaluateWeapon(Enumerations::WeaponType type, double distance, double health) {$/;"	f	class:FuzzyAgent
+execute	actions/ChangeWeaponAction.cpp	/^	bool ChangeWeaponAction::execute(Actor* actor, GameTime gameTime) {$/;"	f	class:ChangeWeaponAction
+execute	actions/DieAction.h	/^	bool execute(Actor* actor, GameTime gameTime) { $/;"	f	class:DieAction
+execute	actions/ReloadAction.cpp	/^	bool ReloadAction::execute(Actor* actor, GameTime gameTime) {$/;"	f	class:ReloadAction
+execute	actions/ShootAtAction.cpp	/^bool ShootAtAction::execute(Actor* actor, GameTime gameTime) {$/;"	f	class:ShootAtAction
+execute	actions/WaitAction.h	/^	bool execute(Actor* actor, GameTime gameTime) {$/;"	f	class:WaitAction
+explode	entities/CustomShell.cpp	/^void CustomShell::explode(GameTime time) {$/;"	f	class:CustomShell
+explore	agents/FuzzyAgent.h	/^		explore$/;"	e	enum:FuzzyAgent::Strategy
+extension	graphics/ResourceInfo.h	/^	std::string extension;$/;"	m	class:ResourceInfo
+filenameBase	graphics/ResourceInfo.h	/^	std::string filenameBase;$/;"	m	class:ResourceInfo
+frameFieldWidth	graphics/ResourceInfo.cpp	/^int ResourceInfo::frameFieldWidth()$/;"	f	class:ResourceInfo
+frames	graphics/ResourceInfo.h	/^	int frames;$/;"	m	class:ResourceInfo
+frames	main.cpp	/^unsigned int frames = 0;$/;"	v
+friendkills	entities/Actor.h	/^	int friendkills;$/;"	m	class:Actor
+frontends	main/Game.h	/^	std::vector<AbstractFrontend*> frontends;$/;"	m	class:Game
+g	graphics/ResourceInfo.h	/^	unsigned short g;$/;"	m	struct:Color
+game	main/GameFactory.h	/^	std::unique_ptr<Game> game;$/;"	m	class:GameFactory
+gameTime	main/Game.h	/^	GameTime gameTime;$/;"	m	class:Game
+getActionCode	actions/Action.h	/^	std::string getActionCode() { return actionCode; }$/;"	f	class:Action
+getActionName	dumb1.lua	/^function getActionName( action)$/;"	f
+getActionName	testCom1.lua	/^function getActionName( action)$/;"	f
+getActionName	testCom2.lua	/^function getActionName( action)$/;"	f
+getActionStarted	actions/Action.h	/^	GameTime getActionStarted() { return actionStarted; }$/;"	f	class:Action
+getActionStarted	entities/Actor.cpp	/^GameTime Actor::getActionStarted() {$/;"	f	class:Actor
+getActionType	actions/Action.h	/^	Enumerations::ActionType getActionType() {$/;"	f	class:Action
+getActor	agents/ActorKnowledge.h	/^	Actor * getActor() {$/;"	f	class:ActorKnowledge
+getActorInfo	entities/Actor.h	/^	ActorInfo getActorInfo() {$/;"	f	class:Actor
+getActorKnowledge	entities/Actor.h	/^	ActorKnowledge * getActorKnowledge() {$/;"	f	class:Actor
+getActors	main/Game.cpp	/^std::vector<Actor*> & Game::getActors() {$/;"	f	class:Game
+getAmmo	agents/ActorKnowledge.cpp	/^int ActorKnowledge::getAmmo(Enumerations::WeaponType type) {$/;"	f	class:ActorKnowledge
+getAmmo	entities/Actor.h	/^	int getAmmo(Enumerations::WeaponType type) {$/;"	f	class:Actor
+getArmour	agents/ActorInfo.h	/^	int getArmour() const {$/;"	f	class:ActorInfo
+getArmour	agents/ActorKnowledge.cpp	/^int ActorKnowledge::getArmour() {$/;"	f	class:ActorKnowledge
+getArmour	entities/Actor.h	/^	int getArmour() {$/;"	f	class:Actor
+getBool	main/Configuration.cpp	/^bool Configuration::getBool(std::string optionName) {$/;"	f	class:Configuration
+getBoundingPoints	entities/Entity.h	/^	std::vector<Vector4d> getBoundingPoints() {$/;"	f	class:Entity
+getBoundingRadius	entities/Entity.h	/^	double getBoundingRadius() {$/;"	f	class:Entity
+getColor	entities/Entity.h	/^	unsigned getColor() {$/;"	f	class:Entity
+getCurrent	agents/MouseAgent.h	/^	ActorKnowledge * getCurrent() {$/;"	f	class:MouseAgent
+getCurrentAction	entities/Actor.h	/^	Action * getCurrentAction() { $/;"	f	class:Actor
+getCurrentGame	main/GameFactory.cpp	/^Game * GameFactory::getCurrentGame() {$/;"	f	class:GameFactory
+getCurrentWeapon	entities/Actor.h	/^	Enumerations::WeaponType getCurrentWeapon() { $/;"	f	class:Actor
+getDirection	agents/ActorInfo.h	/^	Vector4d getDirection() const {$/;"	f	class:ActorInfo
+getDirection	agents/ActorKnowledge.cpp	/^Vector4d ActorKnowledge::getDirection() {$/;"	f	class:ActorKnowledge
+getDirection	entities/Entity.h	/^	Vector4d getDirection() { $/;"	f	class:Entity
+getDirectionPostfix	graphics/SDLFrontend.cpp	/^std::string getDirectionPostfix(Vector4d direction) {$/;"	f
+getDouble	main/Configuration.cpp	/^double Configuration::getDouble(std::string optionName) {$/;"	f	class:Configuration
+getEndPoint	entities/Wall.h	/^	Vector4d getEndPoint() {$/;"	f	class:Wall
+getEstimatedTimeToReach	agents/ActorKnowledge.cpp	/^int ActorKnowledge::getEstimatedTimeToReach(Vector4d self, Vector4d target) {$/;"	f	class:ActorKnowledge
+getFilename	graphics/ResourceInfo.cpp	/^std::string ResourceInfo::getFilename(int frame_number) {$/;"	f	class:ResourceInfo
+getFrames	graphics/ResourceInfo.cpp	/^int ResourceInfo::getFrames()$/;"	f	class:ResourceInfo
+getFriendKills	entities/Actor.h	/^	int getFriendKills() {$/;"	f	class:Actor
+getGameTime	main/Game.h	/^	GameTime getGameTime() { $/;"	f	class:Game
+getHealth	agents/ActorInfo.h	/^	int getHealth() const {$/;"	f	class:ActorInfo
+getHealth	agents/ActorKnowledge.cpp	/^int ActorKnowledge::getHealth() {$/;"	f	class:ActorKnowledge
+getHealth	entities/Actor.h	/^	int getHealth() {$/;"	f	class:Actor
+getHeight	graphics/Graphics.h	/^	int getHeight() {$/;"	f	class:Graphics
+getHeight	graphics/UserInteface.cpp	/^int UserInterface::getHeight() {$/;"	f	class:UserInterface
+getHeight	main/Game.h	/^	double getHeight() { $/;"	f	class:Game
+getInstance	graphics/ImagesManager.h	/^	static ImagesManager& getInstance() $/;"	f	class:ImagesManager
+getInstance	main/Configuration.h	/^	static Configuration& getInstance()$/;"	f	class:Configuration
+getInstance	main/GameFactory.h	/^	static GameFactory& getInstance() $/;"	f	class:GameFactory
+getInstance	main/RandomGenerator.h	/^	static RandomGenerator& getInstance() $/;"	f	class:RandomGenerator
+getInt	main/Configuration.cpp	/^int Configuration::getInt(std::string optionName) {$/;"	f	class:Configuration
+getInvalidateTime	entities/CustomShell.h	/^	double getInvalidateTime() {$/;"	f	class:CustomShell
+getKilled	entities/Actor.h	/^	int getKilled() {$/;"	f	class:Actor
+getKills	entities/Actor.h	/^	int getKills() {$/;"	f	class:Actor
+getLongDestination	agents/ActorKnowledge.cpp	/^	Vector4d ActorKnowledge::getLongDestination() {$/;"	f	class:ActorKnowledge
+getLongDestination	entities/Actor.h	/^	Vector4d getLongDestination() {$/;"	f	class:Actor
+getMaxMemory	graphics/ImagesManager.h	/^	int getMaxMemory() { return maxMemory; }$/;"	f	class:ImagesManager
+getName	agents/ActorInfo.h	/^	const char* getName() const {$/;"	f	class:ActorInfo
+getName	agents/ActorKnowledge.cpp	/^	const char* ActorKnowledge::getName() const {$/;"	f	class:ActorKnowledge
+getName	entities/Actor.h	/^	const char* getName() {$/;"	f	class:Actor
+getNavigation	agents/ActorKnowledge.cpp	/^Navigation * ActorKnowledge::getNavigation() {$/;"	f	class:ActorKnowledge
+getNavigation	entities/Actor.h	/^	Navigation * getNavigation() {$/;"	f	class:Actor
+getNextAction	actions/Action.h	/^	Action * getNextAction() {$/;"	f	class:Action
+getNodePosition	main/Navigation.h	/^	Vector4d getNodePosition(int index) {$/;"	f	class:Navigation
+getNumberOfPoints	main/Navigation.cpp	/^	int Navigation::getNumberOfPoints() {$/;"	f	class:Navigation
+getNumberOfSpawnPoints	main/Navigation.h	/^	int getNumberOfSpawnPoints() {$/;"	f	class:Navigation
+getNumberOfTriggers	entities/Actor.h	/^	int getNumberOfTriggers() {$/;"	f	class:Actor
+getNumberOfTriggers	main/Navigation.cpp	/^	int Navigation::getNumberOfTriggers() {$/;"	f	class:Navigation
+getObjects	main/Game.cpp	/^std::vector<Entity*> & Game::getObjects() {$/;"	f	class:Game
+getPoints	entities/BoundingBox.h	/^	std::vector<Vector4d> getPoints() {$/;"	f	class:BoundingBox
+getPosition	agents/ActorInfo.h	/^	Vector4d getPosition() const {$/;"	f	class:ActorInfo
+getPosition	agents/ActorKnowledge.cpp	/^Vector4d ActorKnowledge::getPosition() {$/;"	f	class:ActorKnowledge
+getPosition	entities/Entity.h	/^	Vector4d getPosition() { $/;"	f	class:Entity
+getPrevPosition	entities/CustomShell.h	/^	Vector4d getPrevPosition() {$/;"	f	class:CustomShell
+getRadius	entities/BoundingBox.h	/^	double getRadius() {$/;"	f	class:BoundingBox
+getRadius	entities/CustomShell.h	/^	double getRadius() {$/;"	f	class:CustomShell
+getRectangle	graphics/ResourceInfo.cpp	/^Rectangle ResourceInfo::getRectangle()$/;"	f	class:ResourceInfo
+getResourceHandler	graphics/ImagesManager.cpp	/^int ImagesManager::getResourceHandler(const std::string resource_name)$/;"	f	class:ImagesManager
+getResourceInfo	graphics/ImagesManager.cpp	/^const ResourceInfo & ImagesManager::getResourceInfo(const std::string resource_name)$/;"	f	class:ImagesManager
+getResourceName	entities/Actor.h	/^	std::string getResourceName()$/;"	f	class:Actor
+getResourceName	graphics/ResourceInfo.cpp	/^std::string ResourceInfo::getResourceName()$/;"	f	class:ResourceInfo
+getScreen	graphics/Graphics.cpp	/^SDL_Surface * Graphics::getScreen() {$/;"	f	class:Graphics
+getSeenActors	agents/ActorKnowledge.cpp	/^std::vector<ActorInfo> ActorKnowledge::getSeenActors() {$/;"	f	class:ActorKnowledge
+getSeenFoes	agents/ActorKnowledge.cpp	/^std::vector<ActorInfo> ActorKnowledge::getSeenFoes() {$/;"	f	class:ActorKnowledge
+getSeenFriends	agents/ActorKnowledge.cpp	/^std::vector<ActorInfo> ActorKnowledge::getSeenFriends() {$/;"	f	class:ActorKnowledge
+getSelf	agents/ActorKnowledge.cpp	/^ActorInfo ActorKnowledge::getSelf() {$/;"	f	class:ActorKnowledge
+getShortDestination	agents/ActorKnowledge.cpp	/^	Vector4d ActorKnowledge::getShortDestination() {$/;"	f	class:ActorKnowledge
+getShortDestination	entities/Actor.h	/^	Vector4d getShortDestination() {$/;"	f	class:Actor
+getSpawnPoint	main/Navigation.h	/^	Vector4d getSpawnPoint(int index) {$/;"	f	class:Navigation
+getSpeed	entities/Actor.h	/^	double getSpeed() {$/;"	f	class:Actor
+getStartPoint	entities/Wall.h	/^	Vector4d getStartPoint() {$/;"	f	class:Wall
+getString	main/Configuration.cpp	/^std::string Configuration::getString(std::string optionName) {$/;"	f	class:Configuration
+getSurface	graphics/ImagesManager.cpp	/^const SDL_Surface* ImagesManager::getSurface( const std::string resource_name, Vector4d scale, int frame_number )$/;"	f	class:ImagesManager
+getSurface	graphics/ImagesManager.cpp	/^const SDL_Surface* ImagesManager::getSurface( int resource_handler, Vector4d scale, int frame_number )$/;"	f	class:ImagesManager
+getTeam	agents/ActorInfo.h	/^	unsigned short getTeam() const {$/;"	f	class:ActorInfo
+getTeam	agents/ActorKnowledge.cpp	/^unsigned short ActorKnowledge::getTeam() {$/;"	f	class:ActorKnowledge
+getTeam	entities/Actor.h	/^	unsigned int getTeam() {$/;"	f	class:Actor
+getTimeToEnd	main/Game.cpp	/^int Game::getTimeToEnd()$/;"	f	class:Game
+getTransparentColor	graphics/ResourceInfo.cpp	/^Color ResourceInfo::getTransparentColor() $/;"	f	class:ResourceInfo
+getTrigger	entities/Actor.h	/^	Trigger * getTrigger(int index) {$/;"	f	class:Actor
+getTrigger	main/Navigation.cpp	/^	Trigger * Navigation::getTrigger(int index) {$/;"	f	class:Navigation
+getType	entities/ArmourPack.h	/^	virtual TriggerType getType() {$/;"	f	class:ArmourPack
+getType	entities/HealthPack.h	/^	virtual TriggerType getType() {$/;"	f	class:HealthPack
+getType	entities/WeaponPack.h	/^	virtual TriggerType getType() {$/;"	f	class:WeaponPack
+getWeaponType	agents/ActorInfo.h	/^	Enumerations::WeaponType getWeaponType() const {$/;"	f	class:ActorInfo
+getWeaponType	agents/ActorKnowledge.cpp	/^Enumerations::WeaponType ActorKnowledge::getWeaponType() {$/;"	f	class:ActorKnowledge
+getWidth	graphics/Graphics.h	/^	int getWidth() {$/;"	f	class:Graphics
+getWidth	graphics/UserInteface.cpp	/^int UserInterface::getWidth() {$/;"	f	class:UserInterface
+getWidth	main/Game.h	/^	double getWidth() { $/;"	f	class:Game
+getZoomFactor	graphics/Graphics.h	/^	double getZoomFactor() {$/;"	f	class:Graphics
+graphics	graphics/SDLFrontend.h	/^	Graphics * graphics;$/;"	m	class:SDLFrontend
+graphics	graphics/UserInterface.h	/^	Graphics * graphics;$/;"	m	class:UserInterface
+h	graphics/ResourceInfo.h	/^	int h;$/;"	m	struct:Rectangle
+hasIndex	main/Navigation.h	/^	bool hasIndex(AStarNode i, int searchedIndex) {$/;"	f	class:Navigation
+health	agents/ActorInfo.h	/^	int health;$/;"	m	class:ActorInfo
+health	agents/FuzzyAgent.h	/^		health,$/;"	e	enum:FuzzyAgent::Strategy
+health	entities/Actor.h	/^	int health;$/;"	m	class:Actor
+health	entities/HealthPack.h	/^	int health;$/;"	m	class:HealthPack
+height	graphics/Graphics.h	/^	int height;$/;"	m	class:Graphics
+height	main/Game.h	/^	double height;$/;"	m	class:Game
+id	entities/Entity.h	/^	long id;$/;"	m	class:Entity
+incrementFriendsKilled	entities/Actor.h	/^	void incrementFriendsKilled() {$/;"	f	class:Actor
+incrementKilled	entities/Actor.h	/^	void incrementKilled() {$/;"	f	class:Actor
+incrementKills	entities/Actor.h	/^	void incrementKills() {$/;"	f	class:Actor
+index	entities/Trigger.h	/^	int index;$/;"	m	class:Trigger
+index	main/NavigationNode.h	/^	int index;$/;"	m	class:NavigationNode
+indexNr	main/Navigation.h	/^	int indexNr;$/;"	m	class:Navigation
+inflictDamage	main/Game.cpp	/^void Game::inflictDamage(Actor* actor, int damage, GameTime time, Actor* attacker) {$/;"	f	class:Game
+invalidate	entities/Entity.h	/^	void invalidate() {$/;"	f	class:Entity
+invalidateTime	entities/CustomShell.h	/^	GameTime invalidateTime;$/;"	m	class:CustomShell
+isActive	entities/Trigger.h	/^	bool isActive() {$/;"	f	class:Trigger
+isBreakable	actions/Action.h	/^	bool isBreakable() { return breakable; }$/;"	f	class:Action
+isDead	entities/Actor.h	/^	bool isDead() {$/;"	f	class:Actor
+isFinished	main/Game.cpp	/^bool Game::isFinished() {$/;"	f	class:Game
+isLoaded	agents/ActorKnowledge.cpp	/^bool ActorKnowledge::isLoaded(Enumerations::WeaponType type){$/;"	f	class:ActorKnowledge
+isLoaded	entities/Actor.h	/^	bool isLoaded(Enumerations::WeaponType type) {$/;"	f	class:Actor
+isMoving	agents/ActorKnowledge.cpp	/^bool ActorKnowledge::isMoving(){$/;"	f	class:ActorKnowledge
+isMoving	entities/Actor.h	/^	bool isMoving() {$/;"	f	class:Actor
+isRepeatable	actions/Action.h	/^	bool isRepeatable() { return repeatable; }$/;"	f	class:Action
+isSet	main/Configuration.cpp	/^bool Configuration::isSet(std::string optionName) {$/;"	f	class:Configuration
+isValid	entities/Entity.h	/^	bool isValid() {$/;"	f	class:Entity
+keepFramerate	main.cpp	/^void keepFramerate() {$/;"	f
+keyPressed	agents/MouseAgent.cpp	/^void MouseAgent::keyPressed(SDLKey key) {$/;"	f	class:MouseAgent
+keyPressed	graphics/UserInteface.cpp	/^void UserInterface::keyPressed(SDLKey key) {$/;"	f	class:UserInterface
+keyReleased	graphics/UserInteface.cpp	/^void UserInterface::keyReleased(SDLKey key) {$/;"	f	class:UserInterface
+killed	entities/Actor.h	/^	int killed;$/;"	m	class:Actor
+kills	entities/Actor.h	/^	int kills;$/;"	m	class:Actor
+length	main/Misc.cpp	/^double Vector4d::length() { $/;"	f	class:Vector4d
+lengthSquared	main/Misc.cpp	/^double Vector4d::lengthSquared() { $/;"	f	class:Vector4d
+lineCoefficients	entities/BoundingBox.h	/^	Vector4d lineCoefficients(Vector4d p1, Vector4d p2) {$/;"	f	class:BoundingBox
+lineCoefficients	entities/Wall.h	/^	Vector4d lineCoefficients(Vector4d p1, Vector4d p2) {$/;"	f	class:Wall
+lineInteresctsLineSegment	entities/Actor.cpp	/^bool Actor::lineInteresctsLineSegment( Vector4d s1p1, Vector4d s1p2, Vector4d s2p1, Vector4d s2p2) {$/;"	f	class:Actor
+lineInteresctsLineSegment	entities/BoundingBox.h	/^	bool lineInteresctsLineSegment( Vector4d s1p1, Vector4d s1p2, Vector4d s2p1, Vector4d s2p2) {$/;"	f	class:BoundingBox
+lineInteresctsLineSegment	entities/Wall.h	/^	bool lineInteresctsLineSegment( Vector4d s1p1, Vector4d s1p2, Vector4d s2p1, Vector4d s2p2) {$/;"	f	class:Wall
+loadAmmo	entities/Actor.h	/^	void loadAmmo(Enumerations::WeaponType type) {$/;"	f	class:Actor
+loadResourceFile	graphics/ImagesManager.cpp	/^void ImagesManager::loadResourceFile(const std::string filename)$/;"	f	class:ImagesManager
+loaded	entities/Actor.h	/^	bool loaded[ Enumerations::WeaponType::WeaponSize ];$/;"	m	class:Actor
+log	dumb1.lua	/^function log( name, msg)$/;"	f
+log	dumb8.lua	/^function log( name, msg)$/;"	f
+log	testCom1.lua	/^function log( name, msg)$/;"	f
+log	testCom2.lua	/^function log( name, msg)$/;"	f
+longDestination	entities/Actor.h	/^	Vector4d longDestination;$/;"	m	class:Actor
+lower	graphics/SDLFrontend.cpp	/^bool lower(Entity* first, Entity* second) {$/;"	f
+lowerCost	main/Navigation.h	/^static bool lowerCost(AStarNode first, AStarNode second) {$/;"	f
+luaEnv	agents/LuaAgent.h	/^	lua_State * luaEnv;$/;"	m	class:LuaAgent
+luaTeams	main/Game.h	/^	Team2LuaEnvMap luaTeams;$/;"	m	class:Game
+main	main.cpp	/^int main ( int argc, char** argv )$/;"	f
+maxFrames	main.cpp	/^unsigned int maxFrames = 30;$/;"	v
+maxMemory	graphics/ImagesManager.h	/^	unsigned int maxMemory;$/;"	m	class:ImagesManager
+memory	graphics/ImagesManager.h	/^	unsigned int memory;$/;"	m	class:ImagesManager
+mouse	main/Input.h	/^	Vector4d mouse;$/;"	m	class:Input
+mouseButtonPressed	agents/MouseAgent.cpp	/^void MouseAgent::mouseButtonPressed(Vector4d coordinates, Uint8 button) {$/;"	f	class:MouseAgent
+mouseButtonPressed	graphics/UserInteface.cpp	/^void UserInterface::mouseButtonPressed(Vector4d coordinates, Uint8 button) {$/;"	f	class:UserInterface
+mouseMoved	agents/MouseAgent.cpp	/^void MouseAgent::mouseMoved(Vector4d coordinates) {$/;"	f	class:MouseAgent
+mouseMoved	graphics/UserInteface.cpp	/^void UserInterface::mouseMoved(int xrel, int yrel, int x, int y) {$/;"	f	class:UserInterface
+move	entities/Actor.cpp	/^void Actor::move() {$/;"	f	class:Actor
+moveDirection	agents/PlayerAgent.cpp	/^	void PlayerAgent::moveDirection(Vector4d direction) {$/;"	f	class:PlayerAgent
+moveHorizontal	graphics/Graphics.h	/^	void moveHorizontal(double value) {$/;"	f	class:Graphics
+moveTo	agents/PlayerAgent.cpp	/^	void PlayerAgent::moveTo(Vector4d target) {$/;"	f	class:PlayerAgent
+moveVector	entities/Actor.h	/^	Vector4d moveVector;$/;"	m	class:Actor
+moveVertical	graphics/Graphics.h	/^	void moveVertical(double value) {$/;"	f	class:Graphics
+movingHorizontal	graphics/UserInterface.h	/^	double movingHorizontal;$/;"	m	class:UserInterface
+movingVertical	graphics/UserInterface.h	/^	double movingVertical;$/;"	m	class:UserInterface
+name	agents/ActorInfo.h	/^	std::string name;$/;"	m	class:ActorInfo
+name	entities/Actor.h	/^	std::string name;$/;"	m	class:Actor
+navigation	entities/Entity.h	/^	Navigation * navigation;$/;"	m	class:Entity
+navigation	main/Game.h	/^	std::unique_ptr<Navigation> navigation;\/\/TODO move to private$/;"	m	class:Game
+nextAction	actions/Action.h	/^	Action * nextAction;$/;"	m	class:Action
+nextAction	agents/PlayerAgent.h	/^	std::unique_ptr<Action> nextAction;$/;"	m	class:PlayerAgent
+nodes	main/Navigation.h	/^	std::vector<NavigationNode> nodes;$/;"	m	class:Navigation
+normal	main/Misc.h	/^	Vector4d normal() {$/;"	f	struct:Vector4d
+normalize	main/Misc.h	/^	Vector4d normalize() {$/;"	f	struct:Vector4d
+numberOfParticles	actions/ShootAtAction.cpp	/^const int ShootAtAction::numberOfParticles[ Enumerations::WeaponType::WeaponSize ] = { 1, 1, 1, 10 };$/;"	m	class:ShootAtAction	file:
+numberOfParticles	actions/ShootAtAction.h	/^	static const int numberOfParticles[ Enumerations::WeaponType::WeaponSize ];$/;"	m	class:ShootAtAction
+objects	main/Game.h	/^	std::vector<Entity*> objects;$/;"	m	class:Game
+onEnter	actions/Action.cpp	/^void Action::onEnter(Actor* actor, GameTime gameTime) {$/;"	f	class:Action
+onEnter	actions/ChangeWeaponAction.cpp	/^	void ChangeWeaponAction::onEnter(Actor* actor, GameTime gameTime) {$/;"	f	class:ChangeWeaponAction
+onEnter	actions/DieAction.h	/^	void onEnter(Actor* actor, GameTime gameTime) {$/;"	f	class:DieAction
+onEnter	actions/ReloadAction.cpp	/^	void ReloadAction::onEnter(Actor* actor, GameTime gameTime) {$/;"	f	class:ReloadAction
+onEnter	actions/ShootAtAction.cpp	/^void ShootAtAction::onEnter(Actor* actor, GameTime gameTime) {$/;"	f	class:ShootAtAction
+onExit	actions/Action.h	/^	virtual void onExit(Actor* actor, GameTime gameTime) {};$/;"	f	class:Action
+onExit	actions/ChangeWeaponAction.cpp	/^	void ChangeWeaponAction::onExit(Actor* actor, GameTime gameTime) {$/;"	f	class:ChangeWeaponAction
+onExit	actions/ReloadAction.cpp	/^	void ReloadAction::onExit(Actor* actor, GameTime gameTime) {$/;"	f	class:ReloadAction
+onExit	actions/ShootAtAction.cpp	/^void ShootAtAction::onExit(Actor* actor, GameTime gameTime) {$/;"	f	class:ShootAtAction
+onStart	agents/FuzzyAgent.h	/^	void onStart(ActorKnowledge * actorKnowledge, GameTime time) {}$/;"	f	class:FuzzyAgent
+onStart	agents/LuaAgent.cpp	/^void LuaAgent::onStart(ActorKnowledge * actorKnowledge, GameTime time) {$/;"	f	class:LuaAgent
+onStart	agents/MouseAgent.h	/^	void onStart(ActorKnowledge * actorKnowledge, GameTime time) {}$/;"	f	class:MouseAgent
+onStartName	agents/LuaAgent.h	/^	std::string onStartName;$/;"	m	class:LuaAgent
+ooPoint	graphics/Graphics.h	/^	std::unique_ptr<Vector4d> ooPoint;$/;"	m	class:Graphics
+operator !=	main/Misc.h	/^	bool operator!=(const Vector4d& q) const {$/;"	f	struct:Vector4d
+operator *	main/Misc.h	/^	Vector4d operator*(const double &q) {$/;"	f	struct:Vector4d
+operator *=	main/Misc.h	/^	Vector4d operator*=(const double &q) {$/;"	f	struct:Vector4d
+operator +	main/Misc.h	/^	Vector4d operator+(const Vector4d &q) {$/;"	f	struct:Vector4d
+operator +=	main/Misc.h	/^	Vector4d operator+=(const Vector4d &q) {$/;"	f	struct:Vector4d
+operator -	main/Misc.h	/^	Vector4d operator-(const Vector4d &q) {$/;"	f	struct:Vector4d
+operator -=	main/Misc.h	/^	Vector4d operator-=(const Vector4d &q) {$/;"	f	struct:Vector4d
+operator /	main/Misc.h	/^	Vector4d operator\/(const double &q) {$/;"	f	struct:Vector4d
+operator /=	main/Misc.h	/^	Vector4d operator\/=(const double &q) {$/;"	f	struct:Vector4d
+operator <	agents/ActorInfo.h	/^	bool operator<(const ActorInfo& q) const {$/;"	f	class:ActorInfo
+operator <	main/Misc.h	/^	bool operator<(const Vector4d& q) const {$/;"	f	struct:Vector4d
+operator ==	main/Misc.h	/^	bool operator==(const Vector4d& q) const {$/;"	f	struct:Vector4d
+pReason	graphics/GraphicsException.h	/^	const char * pReason;$/;"	m	class:GraphicsException
+pReason	graphics/ResourceInfo.h	/^	const char * pReason;$/;"	m	class:ResourceException
+parse_line	graphics/ImagesManager.cpp	/^bool ImagesManager::parse_line(char const* str)$/;"	f	class:ImagesManager
+points	entities/BoundingBox.h	/^	std::vector<Vector4d> points;$/;"	m	class:BoundingBox
+position	agents/ActorInfo.h	/^	Vector4d position;$/;"	m	class:ActorInfo
+position	entities/Entity.h	/^	Vector4d position;$/;"	m	class:Entity
+position	main/NavigationNode.h	/^	Vector4d position;$/;"	m	class:NavigationNode
+prevPosition	entities/CustomShell.h	/^	Vector4d prevPosition;$/;"	m	class:CustomShell
+printResults	main/Game.cpp	/^void Game::printResults() {$/;"	f	class:Game
+r	graphics/ResourceInfo.h	/^	unsigned short r;$/;"	m	struct:Color
+radius	actions/ShootAtAction.cpp	/^const double ShootAtAction::radius[ Enumerations::WeaponType::WeaponSize ] = { 0, 0, 50, 0 };$/;"	m	class:ShootAtAction	file:
+radius	actions/ShootAtAction.h	/^	static const double radius[ Enumerations::WeaponType::WeaponSize ];$/;"	m	class:ShootAtAction
+radius	entities/BoundingBox.h	/^	double radius;$/;"	m	class:BoundingBox
+radius	entities/CustomShell.h	/^	double radius;$/;"	m	class:CustomShell
+random	main/RandomGenerator.h	/^	double random() {$/;"	f	class:RandomGenerator
+randomDouble	agents/PlayerAgent.cpp	/^double PlayerAgent::randomDouble() {$/;"	f	class:PlayerAgent
+randomNormal	main/RandomGenerator.h	/^	float randomNormal(float m = 0.0, float s = 1.0)$/;"	f	class:RandomGenerator
+rayColision	entities/BoundingBox.h	/^	bool rayColision(Vector4d position, Vector4d rayDisplacment, Vector4d rayPosition) {$/;"	f	class:BoundingBox
+rayColision	entities/Entity.h	/^	virtual bool rayColision(Vector4d displacementVector, Vector4d rayPosition) {$/;"	f	class:Entity
+rayColision	entities/Trigger.h	/^	bool rayColision(Vector4d displacementVector, Vector4d rayPosition) {$/;"	f	class:Trigger
+rayColision	entities/Wall.h	/^	bool rayColision(Vector4d displacementVector, Vector4d rayPosition) {$/;"	f	class:Wall
+rayColisionDistance	entities/BoundingBox.h	/^	double rayColisionDistance(Vector4d position, Vector4d rayDisplacment, Vector4d rayPosition) {$/;"	f	class:BoundingBox
+rayColisionDistance	entities/Entity.h	/^	virtual double rayColisionDistance(Vector4d displacementVector, Vector4d rayPosition) {$/;"	f	class:Entity
+rayColisionDistance	entities/Wall.h	/^	double rayColisionDistance(Vector4d rayDisplacment, Vector4d rayPosition) {$/;"	f	class:Wall
+rectangle	graphics/ResourceInfo.h	/^	Rectangle rectangle;$/;"	m	class:ResourceInfo
+registerAgent	graphics/UserInterface.h	/^	void registerAgent(MouseAgent * mouseAgent) {$/;"	f	class:UserInterface
+reload	agents/PlayerAgent.cpp	/^	void PlayerAgent::reload() {$/;"	f	class:PlayerAgent
+reloadTime	actions/ShootAtAction.cpp	/^const double ShootAtAction::reloadTime[ Enumerations::WeaponType::WeaponSize ] = { 0, 3, 1.5, 1 };$/;"	m	class:ShootAtAction	file:
+reloadTime	actions/ShootAtAction.h	/^	static const double reloadTime[ Enumerations::WeaponType::WeaponSize ];$/;"	m	class:ShootAtAction
+repeatable	actions/Action.h	/^	bool repeatable;$/;"	m	class:Action
+reset	entities/Actor.cpp	/^void Actor::reset(Vector4d position, GameTime time) {$/;"	f	class:Actor
+resetCurrentAction	entities/Actor.h	/^	void resetCurrentAction(Action * action) {$/;"	f	class:Actor
+resourceName	entities/Actor.h	/^	std::string resourceName;$/;"	m	class:Actor
+resourceName	graphics/ResourceInfo.h	/^	std::string resourceName;$/;"	m	class:ResourceInfo
+resourceNames	graphics/ImagesManager.h	/^	std::unordered_map<std::string, int> resourceNames;$/;"	m	class:ImagesManager
+resources	graphics/ImagesManager.h	/^	std::unordered_map<int, ResourceInfo> resources;$/;"	m	class:ImagesManager
+rotate	actions/Action.cpp	/^void Action::rotate(Actor * actor, Vector4d direction, GameTime time) {$/;"	f	class:Action
+rotate	agents/PlayerAgent.cpp	/^	void PlayerAgent::rotate(Vector4d direction) {$/;"	f	class:PlayerAgent
+rotate	entities/Actor.cpp	/^void Actor::rotate() {$/;"	f	class:Actor
+rotateZ	main/Misc.cpp	/^void Vector4d::rotateZ(double arc, bool radian) {$/;"	f	class:Vector4d
+run	graphics/SDLFrontend.cpp	/^void SDLFrontend::run(Game * game) {$/;"	f	class:SDLFrontend
+runFrontends	main/Game.cpp	/^void Game::runFrontends() {$/;"	f	class:Game
+screen	graphics/Graphics.h	/^	SDL_Surface* screen;$/;"	m	class:Graphics
+searchClosestNavigationNode	main/Navigation.cpp	/^	int Navigation::searchClosestNavigationNode(Vector4d point) {$/;"	f	class:Navigation
+searchWay	main/Navigation.cpp	/^	std::vector<int> Navigation::searchWay(Vector4d from, Vector4d to) {$/;"	f	class:Navigation
+searchWay	main/Navigation.cpp	/^	std::vector<int> Navigation::searchWay(int from, int to) {$/;"	f	class:Navigation
+seenActors	agents/ActorKnowledge.h	/^	std::set<ActorInfo> seenActors;$/;"	m	class:ActorKnowledge
+seenObjects	agents/ActorKnowledge.h	/^	std::set<ObjectInfo*> seenObjects;$/;"	m	class:ActorKnowledge
+selectWeapon	agents/PlayerAgent.cpp	/^	void PlayerAgent::selectWeapon(Enumerations::WeaponType weapon) {$/;"	f	class:PlayerAgent
+setArmour	agents/ActorInfo.h	/^	void setArmour(int armour) {$/;"	f	class:ActorInfo
+setArmour	entities/Actor.h	/^	void setArmour(int a) {$/;"	f	class:Actor
+setCurrentAction	entities/Actor.h	/^	void setCurrentAction(Action * action) {$/;"	f	class:Actor
+setCurrentWeapon	entities/Actor.h	/^	void setCurrentWeapon(Enumerations::WeaponType weapon) { $/;"	f	class:Actor
+setDestination	entities/Actor.cpp	/^void Actor::setDestination(Vector4d vect) {$/;"	f	class:Actor
+setDirection	agents/ActorInfo.h	/^	void setDirection(Vector4d direction) {$/;"	f	class:ActorInfo
+setDirection	entities/Entity.h	/^	void setDirection( Vector4d direction ) { $/;"	f	class:Entity
+setDirectionVector	entities/Actor.h	/^	void setDirectionVector(Vector4d vect) {$/;"	f	class:Actor
+setHealth	agents/ActorInfo.h	/^	void setHealth(int health) {$/;"	f	class:ActorInfo
+setHealth	entities/Actor.h	/^	void setHealth(int health) {$/;"	f	class:Actor
+setMaxMemory	graphics/ImagesManager.h	/^	void setMaxMemory( int maxMemory ) { this->maxMemory = maxMemory; }$/;"	f	class:ImagesManager
+setMoveVector	entities/Actor.h	/^	void setMoveVector(Vector4d vect) {$/;"	f	class:Actor
+setNextAction	actions/Action.h	/^	void setNextAction(Action * action) {$/;"	f	class:Action
+setOOPoint	graphics/Graphics.h	/^	void setOOPoint(double x = 0, double y = 0, double scale = 10) {$/;"	f	class:Graphics
+setOOPoint	graphics/UserInteface.cpp	/^void UserInterface::setOOPoint(double x, double y, double scale) {$/;"	f	class:UserInterface
+setPosition	agents/ActorInfo.h	/^	void setPosition(Vector4d position) {$/;"	f	class:ActorInfo
+setPosition	entities/Entity.h	/^	virtual void setPosition(Vector4d position) {$/;"	f	class:Entity
+setResourceName	entities/Actor.h	/^	void setResourceName( std::string name)$/;"	f	class:Actor
+setSpeed	entities/Actor.h	/^	void setSpeed( double speed )$/;"	f	class:Actor
+setTeam	agents/ActorInfo.h	/^	void setTeam(unsigned short team) {$/;"	f	class:ActorInfo
+setUserInterface	main/Input.h	/^	void setUserInterface(UserInterface * ui) {$/;"	f	class:Input
+setWeaponType	agents/ActorInfo.h	/^	void setWeaponType(Enumerations::WeaponType type) {$/;"	f	class:ActorInfo
+shaded	graphics/UserInterface.h	/^		shaded,$/;"	e	enum:UserInterface::textquality
+shootAt	agents/PlayerAgent.cpp	/^	void PlayerAgent::shootAt(ActorInfo enemy) {$/;"	f	class:PlayerAgent
+shootAtPoint	agents/PlayerAgent.cpp	/^	void PlayerAgent::shootAtPoint(Vector4d vect) {$/;"	f	class:PlayerAgent
+shootTime	actions/ShootAtAction.cpp	/^const double ShootAtAction::shootTime[ Enumerations::WeaponType::WeaponSize ] = { 1, 5, 1.5, 1 };$/;"	m	class:ShootAtAction	file:
+shootTime	actions/ShootAtAction.h	/^	static const double shootTime[ Enumerations::WeaponType::WeaponSize ];$/;"	m	class:ShootAtAction
+shortDestination	entities/Actor.h	/^	Vector4d shortDestination;$/;"	m	class:Actor
+showTime	graphics/UserInteface.cpp	/^void UserInterface::showTime(int timeToEnd)$/;"	f	class:UserInterface
+showVector	dumb1.lua	/^function showVector( vector)$/;"	f
+showVector	dumb2.lua	/^function showVector( vector)$/;"	f
+showVector	dumb3.lua	/^function showVector( vector)$/;"	f
+showVector	dumb4.lua	/^function showVector( vector)$/;"	f
+showVector	dumb5.lua	/^function showVector( vector)$/;"	f
+showVector	dumb6.lua	/^function showVector( vector)$/;"	f
+showVector	dumb7.lua	/^function showVector( vector)$/;"	f
+showVector	dumb8.lua	/^function showVector( vector)$/;"	f
+showVector	testCom1.lua	/^function showVector( vector)$/;"	f
+showVector	testCom2.lua	/^function showVector( vector)$/;"	f
+size	agents/FuzzyAgent.h	/^		size,$/;"	e	enum:FuzzyAgent::Strategy
+smallFont	graphics/UserInterface.h	/^	TTF_Font * smallFont;$/;"	m	class:UserInterface
+solid	entities/Entity.h	/^	bool solid;$/;"	m	class:Entity
+solid	graphics/UserInterface.h	/^		solid,$/;"	e	enum:UserInterface::textquality
+source	entities/CustomShell.h	/^	Entity * source;$/;"	m	class:CustomShell
+spawns	main/Navigation.h	/^	std::vector<Vector4d> spawns;$/;"	m	class:Navigation
+speed	actions/ShootAtAction.cpp	/^const double ShootAtAction::speed[ Enumerations::WeaponType::WeaponSize ] = { 500, 15000, 350, 1000 };$/;"	m	class:ShootAtAction	file:
+speed	actions/ShootAtAction.h	/^	static const double speed[ Enumerations::WeaponType::WeaponSize ];$/;"	m	class:ShootAtAction
+speed	entities/Actor.h	/^	double speed;$/;"	m	class:Actor
+speed	entities/CustomShell.h	/^	double speed;$/;"	m	class:CustomShell
+standardCost	actions/Action.h	/^	TimeUnit standardCost;$/;"	m	class:Action
+start	agents/PlayerAgent.cpp	/^void PlayerAgent::start(ActorKnowledge * actorKnowledge, GameTime time) {$/;"	f	class:PlayerAgent
+startGame	main/Game.h	/^	void startGame() {$/;"	f	class:Game
+startPoint	entities/Wall.h	/^	Vector4d startPoint;$/;"	m	class:Wall
+start_game	main/Game.h	/^	std::chrono::time_point<std::chrono::system_clock> start_game;$/;"	m	class:Game
+started	entities/Actor.h	/^	bool started;$/;"	m	class:Actor
+stopAtDestination	entities/CustomShell.h	/^	bool stopAtDestination;$/;"	m	class:CustomShell
+stopAtTarget	actions/ShootAtAction.cpp	/^const bool ShootAtAction::stopAtTarget[ Enumerations::WeaponType::WeaponSize ] = {false, false, true, false};$/;"	m	class:ShootAtAction	file:
+stopAtTarget	actions/ShootAtAction.h	/^	static const bool stopAtTarget[ Enumerations::WeaponType::WeaponSize ];$/;"	m	class:ShootAtAction
+strategyChild	agents/FuzzyAgent.h	/^	int strategyChild[Strategy::size];$/;"	m	class:FuzzyAgent
+strategyModel	agents/FuzzyAgent.h	/^	int strategyModel[Strategy::size];$/;"	m	class:FuzzyAgent
+surfaces	graphics/ImagesManager.h	/^	IntPair2SDL_SurfaceMap surfaces;$/;"	m	class:ImagesManager
+target	actions/ShootAtAction.h	/^	Vector4d target;$/;"	m	class:ShootAtAction
+task3onStart	task3.lua	/^function task3onStart( agent, actorKnowledge, time)$/;"	f
+task3whatTo	task3.lua	/^function task3whatTo( agent, actorKnowledge, time)	$/;"	f
+team	agents/ActorInfo.h	/^	unsigned short team;$/;"	m	class:ActorInfo
+team	entities/Actor.h	/^	unsigned int team;$/;"	m	class:Actor
+testCom1onStart	testCom1.lua	/^function testCom1onStart( agent, actorKnowledge, time)$/;"	f
+testCom1whatTo	testCom1.lua	/^function testCom1whatTo( agent, actorKnowledge, time)$/;"	f
+testCom2onStart	testCom2.lua	/^function testCom2onStart( agent, actorKnowledge, time)$/;"	f
+testCom2whatTo	testCom2.lua	/^function testCom2whatTo( agent, actorKnowledge, time)$/;"	f
+textquality	graphics/UserInterface.h	/^	enum textquality {$/;"	g	class:UserInterface
+ticks	main.cpp	/^Uint32 ticks = 0;$/;"	v
+timeToActivate	entities/Trigger.h	/^	int timeToActivate;$/;"	m	class:Trigger
+transformXToViewCoordinate	graphics/Graphics.cpp	/^double Graphics::transformXToViewCoordinate(double x) {$/;"	f	class:Graphics
+transformXToWorldCoordinate	graphics/Graphics.cpp	/^double Graphics::transformXToWorldCoordinate(double x) {$/;"	f	class:Graphics
+transformYToViewCoordinate	graphics/Graphics.cpp	/^double Graphics::transformYToViewCoordinate(double y) {$/;"	f	class:Graphics
+transformYToWorldCoordinate	graphics/Graphics.cpp	/^double Graphics::transformYToWorldCoordinate(double y) {$/;"	f	class:Graphics
+transparentColor	graphics/ResourceInfo.h	/^	Color transparentColor;$/;"	m	class:ResourceInfo
+transparentDefined	graphics/ResourceInfo.h	/^	bool transparentDefined;$/;"	m	class:ResourceInfo
+trigger	entities/ArmourPack.h	/^	virtual void trigger(Actor * actor) {$/;"	f	class:ArmourPack
+trigger	entities/HealthPack.h	/^	virtual void trigger(Actor * actor) {$/;"	f	class:HealthPack
+trigger	entities/WeaponPack.h	/^	virtual void trigger(Actor * actor) {$/;"	f	class:WeaponPack
+triggers	main/Navigation.h	/^	std::vector<Trigger*> triggers;$/;"	m	class:Navigation
+type	entities/WeaponPack.h	/^	Enumerations::WeaponType type;$/;"	m	class:WeaponPack
+ui	main/Input.h	/^	UserInterface * ui;$/;"	m	class:Input
+update	entities/Actor.cpp	/^void Actor::update(GameTime time) {$/;"	f	class:Actor
+update	entities/CustomShell.cpp	/^void CustomShell::update(GameTime time) {$/;"	f	class:CustomShell
+update	entities/Entity.h	/^	virtual void update(GameTime time) { $/;"	f	class:Entity
+update	entities/Trigger.h	/^	virtual void update(GameTime time) {$/;"	f	class:Trigger
+update	entities/Wall.h	/^	virtual void update(GameTime time) {};$/;"	f	class:Wall
+update	graphics/Graphics.cpp	/^void Graphics::update() {$/;"	f	class:Graphics
+update	graphics/UserInteface.cpp	/^void UserInterface::update(std::vector<Actor*> allActors) {$/;"	f	class:UserInterface
+update	main/Input.cpp	/^bool Input::update() {$/;"	f	class:Input
+updateAI	main/Game.cpp	/^void Game::updateAI() {$/;"	f	class:Game
+updateSpotting	agents/ActorKnowledge.cpp	/^void ActorKnowledge::updateSpotting() {$/;"	f	class:ActorKnowledge
+updateSpotting	entities/Actor.h	/^	void updateSpotting() {$/;"	f	class:Actor
+updateWorld	main/Game.cpp	/^void Game::updateWorld() {$/;"	f	class:Game
+val	main/Misc.h	/^	double val[4];$/;"	m	struct:Vector4d
+valid	entities/Entity.h	/^	bool valid;$/;"	m	class:Entity
+value	main/Misc.h	/^	double value(int i) {$/;"	f	struct:Vector4d
+vm	main/Configuration.h	/^    boost::program_options::variables_map vm;$/;"	m	class:Configuration
+w	graphics/ResourceInfo.h	/^	int w;$/;"	m	struct:Rectangle
+wait	agents/PlayerAgent.cpp	/^	void PlayerAgent::wait() {$/;"	f	class:PlayerAgent
+way	entities/Actor.h	/^	std::vector<int> way;$/;"	m	class:Actor
+weapon	actions/ChangeWeaponAction.h	/^	Enumerations::WeaponType weapon;$/;"	m	class:ChangeWeaponAction
+weaponChild	agents/FuzzyAgent.h	/^	int weaponChild[Enumerations::WeaponSize];$/;"	m	class:FuzzyAgent
+weaponModel	agents/FuzzyAgent.h	/^	int weaponModel[Enumerations::WeaponSize];$/;"	m	class:FuzzyAgent
+weaponType	agents/ActorInfo.h	/^	Enumerations::WeaponType weaponType;$/;"	m	class:ActorInfo
+whatTo	bones.lua	/^function whatTo(agent, actorKnowledge, gametime)$/;"	f
+whatTo	flesh.lua	/^function whatTo(agent, actorKnowledge, gametime)$/;"	f
+whatTo	script.lua	/^function whatTo(agent, actorKnowledge, gametime)$/;"	f
+whatToDo	agents/FuzzyAgent.cpp	/^void FuzzyAgent::whatToDo(ActorKnowledge * actorKnowledge, GameTime time) {$/;"	f	class:FuzzyAgent
+whatToDo	agents/LuaAgent.cpp	/^void LuaAgent::whatToDo(ActorKnowledge * actorKnowledge, GameTime time) {$/;"	f	class:LuaAgent
+whatToDo	agents/MouseAgent.cpp	/^void MouseAgent::whatToDo(ActorKnowledge * actorKnowledge, GameTime time) {$/;"	f	class:MouseAgent
+whatToDoNow	agents/PlayerAgent.cpp	/^Action * PlayerAgent::whatToDoNow(ActorKnowledge * actorKnowledge, GameTime time) {$/;"	f	class:PlayerAgent
+whatToName	agents/LuaAgent.h	/^	std::string whatToName;$/;"	m	class:LuaAgent
+width	graphics/Graphics.h	/^	int width;$/;"	m	class:Graphics
+width	main/Game.h	/^	double width;$/;"	m	class:Game
+x	graphics/ResourceInfo.h	/^	int x;$/;"	m	struct:Rectangle
+y	graphics/ResourceInfo.h	/^	int y;$/;"	m	struct:Rectangle
+zoom	graphics/Graphics.h	/^	void zoom(double value) {$/;"	f	class:Graphics
+zooming	graphics/UserInterface.h	/^	double zooming;$/;"	m	class:UserInterface
+~ActorInfo	agents/ActorInfo.h	/^	virtual ~ActorInfo() {}$/;"	f	class:ActorInfo
+~Game	main/Game.cpp	/^Game::~Game() {$/;"	f	class:Game
+~Graphics	graphics/Graphics.cpp	/^Graphics::~Graphics() {$/;"	f	class:Graphics
+~ImagesManager	graphics/ImagesManager.cpp	/^ImagesManager::~ImagesManager()$/;"	f	class:ImagesManager
+~UserInterface	graphics/UserInterface.h	/^	~UserInterface() {$/;"	f	class:UserInterface

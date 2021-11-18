@@ -1,0 +1,41 @@
+#pragma once
+#ifndef FUZZY_AGENT_H
+#define FUZZY_AGENT_H
+#include "agents/PlayerAgent.h"
+#include "entities/Trigger.h"
+
+/** fuzzy rules driven agent
+*/
+class FuzzyAgent : public PlayerAgent
+{
+public:
+	enum Strategy {
+		health,
+		ammo,
+		attack,
+		defend,
+		size,
+		explore
+	};
+	FuzzyAgent();
+	void whatToDo(ActorKnowledge * actorKnowledge, GameTime time);
+	void onStart(ActorKnowledge * actorKnowledge, GameTime time) {}
+private:
+	double evaluateAmmo();
+	double evaluateEnemy(double distance, double health);
+	double evaluateWeapon(Enumerations::WeaponType type, double distance, double health);
+	double evaluateStrategy(Strategy strategy, double threat, double ammo);
+
+	Strategy currentStrategy;
+	int ammoModel, ammoChild;
+	int strategyModel[Strategy::size];
+	int strategyChild[Strategy::size];
+	int weaponModel[Enumerations::WeaponSize];
+	int weaponChild[Enumerations::WeaponSize];
+	int enemyModel, enemyChild;
+
+	Trigger * anyHealthPack();
+	Trigger * anyWeaponPack();
+};
+
+#endif //FUZZY_AGENT_H

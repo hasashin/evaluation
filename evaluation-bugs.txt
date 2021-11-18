@@ -1,0 +1,16 @@
+koniecznie przesledzic zmiany w evaluation.txt
+----------------------done---------------------
+usunieto getActionType
+dodano mozliwosc pobrania pozycji do ktorej zmierzamy (w krótkiej i dlugiej perpektywie)
+mozna zmienic poczatkowy zapas amunicji w pliku konfiguracyjnym
+aktor moze poznac swoja nazwe
+nie ma problemu z u|yciem tych samych nazw aktorow
+respawn poprawiony
+dodana funkcja onStart u agenta
+!!!!nazwy onStart i whatTo poprzedzic nazwa skryptu!!!!
+wyswietlanie wynikow koncowych
+poprawiony bug z nie zniszczalnym armourem
+komunikacja miedzy ludkami z tej samej ekipy
+---------------------undone--------------------
+brak pliku lua powoduje blad aplikacji
+czy mozna sprawdzic dla triggera typu Weapon jakiego rodzaju jest to amunicja?

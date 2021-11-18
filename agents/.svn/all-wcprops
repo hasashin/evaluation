@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/evaLUAtion-lynx/!svn/ver/81/evaLUAtion/agents
+END
+LuaAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/evaLUAtion-lynx/!svn/ver/77/evaLUAtion/agents/LuaAgent.cpp
+END
+PlayerAgent.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/evaLUAtion-lynx/!svn/ver/80/evaLUAtion/agents/PlayerAgent.h
+END
+ActorInfo.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/evaLUAtion-lynx/!svn/ver/77/evaLUAtion/agents/ActorInfo.cpp
+END
+LuaAgent.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/evaLUAtion-lynx/!svn/ver/80/evaLUAtion/agents/LuaAgent.h
+END
+FuzzyAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/evaLUAtion-lynx/!svn/ver/81/evaLUAtion/agents/FuzzyAgent.cpp
+END
+AbstractAgent.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/evaLUAtion-lynx/!svn/ver/81/evaLUAtion/agents/AbstractAgent.h
+END
+MouseAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/evaLUAtion-lynx/!svn/ver/71/evaLUAtion/agents/MouseAgent.cpp
+END
+ObjectInfo.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/evaLUAtion-lynx/!svn/ver/80/evaLUAtion/agents/ObjectInfo.h
+END
+ActorKnowledge.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/evaLUAtion-lynx/!svn/ver/81/evaLUAtion/agents/ActorKnowledge.cpp
+END
+ActorInfo.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/evaLUAtion-lynx/!svn/ver/80/evaLUAtion/agents/ActorInfo.h
+END
+FuzzyAgent.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/evaLUAtion-lynx/!svn/ver/80/evaLUAtion/agents/FuzzyAgent.h
+END
+PlayerAgent.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/evaLUAtion-lynx/!svn/ver/77/evaLUAtion/agents/PlayerAgent.cpp
+END
+MouseAgent.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/evaLUAtion-lynx/!svn/ver/80/evaLUAtion/agents/MouseAgent.h
+END
+ActorKnowledge.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/evaLUAtion-lynx/!svn/ver/80/evaLUAtion/agents/ActorKnowledge.h
+END

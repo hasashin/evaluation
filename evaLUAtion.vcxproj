@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{98256221-1BB5-4279-9561-B2D979AA7FEF}</ProjectGuid>
+    <RootNamespace>evaLUAtion</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\lib\boost_1_55_0;D:\work\lib\SDL-1.2.15\include;D:\work\lib\SDL_ttf-2.0.11\include;D:\work\lib\SDL_gfx-2.0.25;D:\work\lib\SDL_image-1.2.12;D:\work\lib\luabind-0.9.1\;D:\work\lib\5.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\work\lib\SDL-1.2.15\lib\x86;D:\work\lib\SDL_image-1.2.12\VisualC\Debug;D:\work\lib\SDL_ttf-2.0.11\lib\x86;D:\work\lib\SDL_gfx-2.0.25\Debug;D:\work\lib\5.1\lib;D:\work\lib\boost_1_55_0\stage\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <EmbedManifest>false</EmbedManifest>
+    <EnableManagedIncrementalBuild>true</EnableManagedIncrementalBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>D:\work\lib\boost_1_55_0;D:\work\lib\SDL-1.2.15\include;D:\work\lib\SDL_ttf-2.0.11\include;D:\work\lib\SDL_gfx-2.0.25;D:\work\lib\SDL_image-1.2.12;D:\work\lib\luabind-0.9.1\;D:\work\lib\5.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\work\lib\SDL-1.2.15\lib\x86;D:\work\lib\SDL_image-1.2.12\VisualC\Debug;D:\work\lib\SDL_ttf-2.0.11\lib\x86;D:\work\lib\SDL_gfx-2.0.25\Release;D:\work\lib\5.1\lib;D:\work\lib\boost_1_55_0\stage\lib;$(LibraryPath)</LibraryPath>
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>D:\development\c libraries\lua5_1_3_Win32_dll8_lib\include;D:\development\c libraries\SDL_gfx-2.0.16;D:\development\boost_1_35_0\boost_1_35_0;D:\development\c libraries\SDL-1.2.13\include;D:\development\c libraries\SDL_image-1.2.6\include;D:\development\luabind;D:\development\c libraries\SDL_ttf-2.0.9\include;.;D:\development\c libraries\ffll_bin_2_2_1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>SDL.lib;SDLmain.lib;SDL_image.lib;SDL_gfx.lib;lua51.lib;SDL_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\development\c libraries\SDL_image-1.2.6-src\SDL_image-1.2.6\VisualC\Release;D:\development\c libraries\SDL-1.2.13-src\SDL-1.2.13\VisualC\SDL\Release;D:\development\c libraries\SDL-1.2.13-src\SDL-1.2.13\VisualC\SDLmain\Release;D:\development\c libraries\SDL_gfx-2.0.16\Release;D:\development\c libraries\lua-5.1.3\src;D:\development\boost_1_35_0\boost_1_35_0\stage\lib;D:\development\c libraries\SDL_ttf-2.0.9\lib;D:\development\c libraries\ffll_bin_2_2_1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <EnableUAC>false</EnableUAC>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+    </Link>
+    <Manifest>
+      <ManifestFromManagedAssembly>
+      </ManifestFromManagedAssembly>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>D:\work\lib\luabind-0.9.1\;D:\work\lib\SDL_gfx-2.0.25;D:\work\lib\boost_1_55_0;D:\work\lib\SDL-1.2.15\include;D:\development\c libraries\SDL_image-1.2.6-src\SDL_image-1.2.6;D:\development\luabind;D:\development\c libraries\SDL_ttf-2.0.9\include;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>SDL.lib;SDLmain.lib;SDL_image.lib;SDL_gfx.lib;lua51.lib;SDL_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\development\c libraries\SDL_image-1.2.6-src\SDL_image-1.2.6\VisualC\Release;D:\development\c libraries\SDL-1.2.13-src\SDL-1.2.13\VisualC\SDL\Release;D:\development\c libraries\SDL-1.2.13-src\SDL-1.2.13\VisualC\SDLmain\Release;D:\development\c libraries\SDL_gfx-2.0.16\Release;D:\development\c libraries\lua-5.1.3\src;D:\development\boost_1_35_0\boost_1_35_0\lib;D:\development\c libraries\SDL_ttf-2.0.9\lib;D:\development\c libraries\ffll_bin_2_2_1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\class.cpp" />
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\class_info.cpp" />
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\class_registry.cpp" />
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\class_rep.cpp" />
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\create_class.cpp" />
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\error.cpp" />
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\exception_handler.cpp" />
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\function.cpp" />
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\inheritance.cpp" />
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\link_compatibility.cpp" />
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\object_rep.cpp" />
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\open.cpp" />
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\pcall.cpp" />
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\scope.cpp" />
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\stack_content_by_name.cpp" />
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\weak_ref.cpp" />
+    <ClCompile Include="..\..\..\..\..\work\lib\luabind-0.9.1\src\wrapper_base.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="actions\Action.cpp" />
+    <ClCompile Include="actions\ChangeWeaponAction.cpp" />
+    <ClCompile Include="actions\ReloadAction.cpp" />
+    <ClCompile Include="actions\ShootAtAction.cpp" />
+    <ClCompile Include="graphics\Graphics.cpp" />
+    <ClCompile Include="graphics\ImagesManager.cpp" />
+    <ClCompile Include="graphics\ResourceInfo.cpp" />
+    <ClCompile Include="graphics\SDLFrontend.cpp" />
+    <ClCompile Include="graphics\UserInteface.cpp" />
+    <ClCompile Include="entities\Actor.cpp" />
+    <ClCompile Include="entities\CustomShell.cpp" />
+    <ClCompile Include="entities\Entity.cpp" />
+    <ClCompile Include="agents\ActorInfo.cpp" />
+    <ClCompile Include="agents\ActorKnowledge.cpp" />
+    <ClCompile Include="agents\LuaAgent.cpp" />
+    <ClCompile Include="agents\MouseAgent.cpp" />
+    <ClCompile Include="agents\PlayerAgent.cpp" />
+    <ClCompile Include="main\Configuration.cpp" />
+    <ClCompile Include="main\Game.cpp" />
+    <ClCompile Include="main\GameFactory.cpp" />
+    <ClCompile Include="main\Input.cpp" />
+    <ClCompile Include="main\Misc.cpp" />
+    <ClCompile Include="main\Navigation.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="actions\Action.h" />
+    <ClInclude Include="actions\ChangeWeaponAction.h" />
+    <ClInclude Include="actions\DieAction.h" />
+    <ClInclude Include="actions\ReloadAction.h" />
+    <ClInclude Include="actions\ShootAtAction.h" />
+    <ClInclude Include="actions\WaitAction.h" />
+    <ClInclude Include="graphics\Graphics.h" />
+    <ClInclude Include="graphics\GraphicsException.h" />
+    <ClInclude Include="graphics\GraphicsFrontend.h" />
+    <ClInclude Include="graphics\ImagesManager.h" />
+    <ClInclude Include="graphics\ResourceInfo.h" />
+    <ClInclude Include="graphics\SDLFrontend.h" />
+    <ClInclude Include="graphics\UserInterface.h" />
+    <ClInclude Include="agents\AbstractAgent.h" />
+    <ClInclude Include="agents\ActorInfo.h" />
+    <ClInclude Include="agents\ActorKnowledge.h" />
+    <ClInclude Include="agents\FuzzyAgent.h" />
+    <ClInclude Include="agents\LuaAgent.h" />
+    <ClInclude Include="agents\MouseAgent.h" />
+    <ClInclude Include="agents\ObjectInfo.h" />
+    <ClInclude Include="agents\PlayerAgent.h" />
+    <ClInclude Include="entities\Actor.h" />
+    <ClInclude Include="entities\ArmourPack.h" />
+    <ClInclude Include="entities\BoundingBox.h" />
+    <ClInclude Include="entities\CustomShell.h" />
+    <ClInclude Include="entities\Entity.h" />
+    <ClInclude Include="entities\HealthPack.h" />
+    <ClInclude Include="entities\Trigger.h" />
+    <ClInclude Include="entities\Wall.h" />
+    <ClInclude Include="entities\WeaponPack.h" />
+    <ClInclude Include="main\AbstractFrontend.h" />
+    <ClInclude Include="main\Configuration.h" />
+    <ClInclude Include="main\Game.h" />
+    <ClInclude Include="main\GameFactory.h" />
+    <ClInclude Include="main\Input.h" />
+    <ClInclude Include="main\Misc.h" />
+    <ClInclude Include="main\Navigation.h" />
+    <ClInclude Include="main\NavigationNode.h" />
+    <ClInclude Include="main\RandomGenerator.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

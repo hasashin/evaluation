@@ -1,0 +1,223 @@
+#include "agents/FuzzyAgent.h"
+#include "agents/ActorKnowledge.h"
+#include "FFLLAPI.h"
+#include <iostream>
+#include "entities/Actor.h"
+#include "entities/Trigger.h"
+#include <cfloat>
+
+// nasty ffll hack as ffll is nasty :<
+#define H99( X ) (X > 99 ? 99 : X)
+
+FuzzyAgent::FuzzyAgent() : PlayerAgent() {
+	ammoModel = ffll_new_model();  
+    int ret_val = (int)ffll_load_fcl_file(ammoModel, "..\\ammo.fcl"); 
+	if (ret_val < 0) {
+		std::cout << "Couldnt load fcl file." << std::endl;
+	}
+    ammoChild = ffll_new_child(ammoModel);
+
+	enemyModel = ffll_new_model();  
+    ret_val = (int)ffll_load_fcl_file(enemyModel, "..\\enemy.fcl"); 
+	if (ret_val < 0) {
+		std::cout << "Couldnt load fcl file." << std::endl;
+	}
+    enemyChild = ffll_new_child(enemyModel);
+
+	weaponModel[Enumerations::Shotgun] = ffll_new_model();  
+    ret_val = (int)ffll_load_fcl_file(weaponModel[Enumerations::Shotgun], "..\\shotgun.fcl"); 
+	if (ret_val < 0) {
+		std::cout << "Couldnt load fcl file." << std::endl;
+	}
+    weaponChild[Enumerations::Shotgun] = ffll_new_child(weaponModel[Enumerations::Shotgun]);
+
+	weaponModel[Enumerations::Chaingun] = ffll_new_model();  
+    ret_val = (int)ffll_load_fcl_file(weaponModel[Enumerations::Chaingun], "..\\chaingun.fcl"); 
+	if (ret_val < 0) {
+		std::cout << "Couldnt load fcl file." << std::endl;
+	}
+    weaponChild[Enumerations::Chaingun] = ffll_new_child(weaponModel[Enumerations::Chaingun]);
+
+	weaponModel[Enumerations::Railgun] = ffll_new_model();  
+    ret_val = (int)ffll_load_fcl_file(weaponModel[Enumerations::Railgun], "..\\railgun.fcl"); 
+	if (ret_val < 0) {
+		std::cout << "Couldnt load fcl file." << std::endl;
+	}
+    weaponChild[Enumerations::Railgun] = ffll_new_child(weaponModel[Enumerations::Railgun]);
+
+	weaponModel[Enumerations::RocketLuncher] = ffll_new_model();  
+    ret_val = (int)ffll_load_fcl_file(weaponModel[Enumerations::RocketLuncher], "..\\rocket.fcl"); 
+	if (ret_val < 0) {
+		std::cout << "Couldnt load fcl file." << std::endl;
+	}
+    weaponChild[Enumerations::RocketLuncher] = ffll_new_child(weaponModel[Enumerations::RocketLuncher]);
+
+	strategyModel[attack] = ffll_new_model();  
+    ret_val = (int)ffll_load_fcl_file(strategyModel[attack], "..\\attack.fcl"); 
+	if (ret_val < 0) {
+		std::cout << "Couldnt load fcl file." << std::endl;
+	}
+    strategyChild[attack] = ffll_new_child(strategyModel[attack]);
+
+	strategyModel[defend] = ffll_new_model();  
+    ret_val = (int)ffll_load_fcl_file(strategyModel[defend], "..\\defend.fcl"); 
+	if (ret_val < 0) {
+		std::cout << "Couldnt load fcl file." << std::endl;
+	}
+    strategyChild[defend] = ffll_new_child(strategyModel[defend]);
+
+	strategyModel[health] = ffll_new_model();  
+    ret_val = (int)ffll_load_fcl_file(strategyModel[health], "..\\lookForHealth.fcl"); 
+	if (ret_val < 0) {
+		std::cout << "Couldnt load fcl file." << std::endl;
+	}
+    strategyChild[health] = ffll_new_child(strategyModel[health]);
+
+	strategyModel[ammo] = ffll_new_model();  
+    ret_val = (int)ffll_load_fcl_file(strategyModel[ammo], "..\\lookForAmmo.fcl"); 
+	if (ret_val < 0) {
+		std::cout << "Couldnt load fcl file." << std::endl;
+	}
+    strategyChild[ammo] = ffll_new_child(strategyModel[ammo]);
+}
+
+	Trigger * FuzzyAgent::anyHealthPack() {
+		for (int i = 0; i < current->getActor()->getNumberOfTriggers(); i++) {
+			Trigger * trigger = current->getActor()->getTrigger(i);
+			if (trigger->isActive() && trigger->getType() == Trigger::TriggerType::Health) {
+				return trigger;
+			}
+		}
+		return NULL;
+	}
+	Trigger * FuzzyAgent::anyWeaponPack() {
+		int ts = current->getActor()->getNumberOfTriggers();
+		int sw = ts * RandomDouble();
+		for (int i = 0; i < ts; i++) {
+			Trigger * trigger = current->getActor()->getTrigger((i+sw)%ts);
+			if (trigger->isActive() && trigger->getType() == Trigger::TriggerType::Weapon) {
+				return trigger;
+			}
+		}
+		return NULL;
+	}
+
+void FuzzyAgent::whatToDo(ActorKnowledge * actorKnowledge, GameTime time) {
+	double ammo = evaluateAmmo();
+
+	std::vector<ActorInfo> foes = current->getSeenFoes();
+	std::vector<int> threats;
+	double maxThreat = 0;
+	double val;
+
+	int best = -1;
+	for (unsigned int i = 0; i < foes.size(); i++) {
+		val = evaluateEnemy((current->getPosition() - foes[i].getPosition()).length(), H99(foes[i].getHealth()));
+		if (val > maxThreat) {
+			maxThreat = val;
+			best = i;
+		}	
+	}
+
+	double max = -1;
+	int bestWp = -1;
+	if (best != -1) {
+		for (int i = 0; i < static_cast<int>(Enumerations::WeaponSize); i++) {
+			val = evaluateWeapon(static_cast<Enumerations::WeaponType>(i),(current->getPosition() - foes[best].getPosition()).length(), H99(foes[best].getHealth()));
+			if (val > max) {
+				max = val;
+				bestWp = i;
+			}
+		}
+	}
+
+	max = -1;
+	int bestSt = Strategy::explore;
+		for (int i = 0; i < static_cast<int>(Strategy::size); i++) {
+			val = evaluateStrategy(static_cast<Strategy>(i), (maxThreat != 0 ? maxThreat : 1), ammo);
+			if (val > max) {
+				max = val;
+				bestSt = i;
+			}
+		}
+
+	if (maxThreat == 0 && (bestSt == Strategy::attack || bestSt == Strategy::defend) ) {
+		bestSt = Strategy::explore;
+	}
+	if ((anyWeaponPack() == NULL) && (bestSt == Strategy::ammo)) {
+		bestSt = Strategy::explore;
+	}
+	if ((anyHealthPack() == NULL) && (bestSt == Strategy::health)) {
+		bestSt = Strategy::explore;
+	}
+
+	if (currentStrategy == bestSt && current->getActor()->isMoving()) {
+
+	} else {
+		Trigger * tr;
+		Vector4d random;
+		switch (bestSt) {
+			case Strategy::ammo :
+				tr = anyWeaponPack();
+				current->getActor()->setDestination(tr->getPosition());
+				break;
+			case Strategy::health :
+				tr = anyHealthPack();
+				current->getActor()->setDestination(tr->getPosition());
+				break;
+			case Strategy::attack :
+				random = Vector4d(40 * RandomDouble() - 20, 40 * RandomDouble() - 20);
+				current->getActor()->setDestination(foes[best].getPosition() + random);
+				break;
+			case Strategy::explore :
+				random = Vector4d(500 * RandomDouble(), 500 * RandomDouble());
+				current->getActor()->setDestination(random);
+				break;
+			case Strategy::defend :
+				random = Vector4d(40 * RandomDouble() - 20, 40 * RandomDouble() - 20);
+				current->getActor()->setDestination(current->getPosition() + random);
+				break;
+		};
+	}
+
+	if (static_cast<int>(current->getWeaponType()) != bestWp) {
+		this->selectWeapon(static_cast<Enumerations::WeaponType>(bestWp));
+	} else {
+		if (maxThreat > 25 || bestSt == Strategy::attack) {
+			this->shootAtPoint(foes[best].getPosition());
+		}
+	}
+
+	currentStrategy = static_cast<Strategy>(bestSt);
+}
+
+double FuzzyAgent::evaluateAmmo() {
+    ffll_set_value(ammoModel, ammoChild, Enumerations::WeaponType::Railgun - 1, current->getActor()->ammoLeft(Enumerations::WeaponType::Railgun) + 1); 
+	ffll_set_value(ammoModel, ammoChild, Enumerations::WeaponType::RocketLuncher - 1, current->getActor()->ammoLeft(Enumerations::WeaponType::RocketLuncher) + 1); 
+    ffll_set_value(ammoModel, ammoChild, Enumerations::WeaponType::Shotgun - 1, current->getActor()->ammoLeft(Enumerations::WeaponType::Shotgun) + 1); 
+
+	return ffll_get_output_value(ammoModel, ammoChild);
+}
+
+double FuzzyAgent::evaluateStrategy(Strategy strategy, double threat, double ammo) {
+	ffll_set_value(strategyModel[strategy], strategyChild[strategy], 0/*threat*/, threat); 
+	ffll_set_value(strategyModel[strategy], strategyChild[strategy], 1/*health*/, current->getHealth()); 
+    ffll_set_value(strategyModel[strategy], strategyChild[strategy], 2/*ammo*/, ammo); 
+
+	return ffll_get_output_value(strategyModel[strategy], strategyChild[strategy]);
+}
+
+double FuzzyAgent::evaluateWeapon(Enumerations::WeaponType type, double distance, double health) {
+    ffll_set_value(weaponModel[type], weaponChild[type], 0/*distance*/, distance); 
+	ffll_set_value(weaponModel[type], weaponChild[type], 1/*ammo*/, current->getActor()->ammoLeft(type) + 1); 
+    ffll_set_value(weaponModel[type], weaponChild[type], 2/*enemy health*/, health); 
+
+	return ffll_get_output_value(weaponModel[type], weaponChild[type]);
+}
+
+double FuzzyAgent::evaluateEnemy(double distance, double health) {
+	ffll_set_value(enemyModel, enemyChild, 0/*distance*/, distance); 
+	ffll_set_value(enemyModel, enemyChild, 1/*health*/, health); 
+
+	return ffll_get_output_value(enemyModel, enemyChild);
+}

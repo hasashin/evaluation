@@ -1,0 +1,4 @@
+brick "images\brick" bmp -1 T 106 76 48
+crate "images\crate" bmp -1 T 106 76 48
+floor "images\concrete" bmp -1 T 106 76 48
+fireball "images\fireball" bmp -1 T 0 0 0

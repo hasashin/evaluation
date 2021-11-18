@@ -1,0 +1,24 @@
+K 10
+svn:ignore
+V 290
+bowskel bitmaps
+bowstan bitmaps
+skel bitmaps
+staffstan bitmaps
+swordskel bitmaps
+swordstan bitmaps
+arrow
+brick.bmp
+concrete.bmp
+crate.bmp
+T_big_wall_broken.zip
+T_big_wall_iso.zip
+T_bushes.zip
+T_squhillstonebrown.zip
+T_squhillstonegrey.zip
+T_trees2.zip
+T_walltowers_iso.zip
+Ttrees.zip
+*.bmp
+
+END
