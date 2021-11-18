@@ -1,3 +1,5 @@
 Lynx			ms		1	45	35	skeleton.bow.
-dumbScript2		sc:dumb1.lua	2	440	40	man.staff.
-dumbScript3   sc:dumb2.lua 2 440 380 man.staff.
+hazak1			sc:hazak1.lua	2	440	40	man.staff.
+hazak2			sc:hazak1.lua	2	440	380	man.staff.
+hazak3			sc:hazak1.lua	2	420	38	man.staff.
+dumb1			sc:dumb2.lua	3	70	30	skeleton.bow.
